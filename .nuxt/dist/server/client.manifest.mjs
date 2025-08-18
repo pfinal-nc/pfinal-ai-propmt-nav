@@ -1,0 +1,1 @@
+export { default } from "file:///Users/pfinal/Documents/pfinal-ai-propmt-nav/node_modules/@nuxt/vite-builder/dist/runtime/client.manifest.mjs"
