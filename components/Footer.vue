@@ -100,7 +100,7 @@
       
       <!-- 版权信息 -->
       <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-        <p class="text-gray-400">&copy; 2024 AI提示词导航. 保留所有权利.</p>
+        <p class="text-gray-400">&copy; 2024 AI提示词导航. PFinalClub 保留所有权利.</p>
         <p class="text-gray-500 text-sm mt-2">Made with ❤️ for AI enthusiasts</p>
       </div>
     </div>

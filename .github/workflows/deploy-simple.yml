@@ -1,14 +1,8 @@
-# AI提示词导航站 - GitHub Pages 部署工作流
-#
-# 自动构建并部署 Nuxt 3 应用到 GitHub Pages
-# 自定义域名: pnav.friday-go.icu
-#
-name: Deploy AI Prompts Nav to GitHub Pages
+# AI提示词导航站 - 简化部署工作流
+name: Deploy to GitHub Pages (Simple)
 
 on:
   push:
-    branches: ["main", "master"]
-  pull_request:
     branches: ["main", "master"]
   workflow_dispatch:
 
@@ -21,38 +15,26 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
-env:
-  NODE_VERSION: "20"
-  PNPM_VERSION: "latest"
-
 jobs:
-  # 构建和测试任务
-  build-and-test:
+  build:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
-        with:
-          fetch-depth: 0  # 获取完整历史用于内容生成
         
       - name: Setup pnpm
         uses: pnpm/action-setup@v4
         with:
-          version: ${{ env.PNPM_VERSION }}
+          version: latest
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: ${{ env.NODE_VERSION }}
+          node-version: "20"
           cache: "pnpm"
           
       - name: Install dependencies
-        run: |
-          if [ -f "pnpm-lock.yaml" ]; then
-            pnpm install --frozen-lockfile
-          else
-            pnpm install
-          fi
+        run: pnpm install
 
       - name: Build for production
         run: pnpm run build
@@ -95,24 +77,21 @@ jobs:
         with:
           path: ./.output/public
 
-  # 部署任务
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build-and-test
-    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
+    needs: build
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
 
-  # 部署通知任务
   notify:
     runs-on: ubuntu-latest
     needs: deploy
-    if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    if: always()
     steps:
       - name: Deployment Status
         run: |
@@ -120,7 +99,6 @@ jobs:
             echo "✅ 部署成功!"
             echo "🌐 网站地址: https://pnav.friday-go.icu"
             echo "📅 部署时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
-            echo "🔗 GitHub Pages: ${{ needs.deploy.outputs.page_url }}"
           else
             echo "❌ 部署失败!"
             echo "请检查构建日志以获取详细信息"

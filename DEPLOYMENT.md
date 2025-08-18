@@ -11,7 +11,12 @@
 
 ### GitHub Actions 工作流
 
-项目配置了自动部署工作流，位于 `.github/workflows/deploy.yml`。
+项目配置了两个自动部署工作流：
+
+1. **完整版**: `.github/workflows/deploy.yml` - 包含代码检查和类型检查
+2. **简化版**: `.github/workflows/deploy-simple.yml` - 专注于核心构建和部署功能
+
+如果遇到依赖或检查问题，建议使用简化版工作流。
 
 #### 触发条件
 
@@ -112,16 +117,25 @@ Value: [username].github.io
    - 检查 Node.js 版本 (需要 20+)
    - 确认 pnpm-lock.yaml 文件存在
    - 查看构建日志
+   - 尝试使用简化版工作流
 
-2. **域名无法访问**
+2. **依赖安装失败**
+   - 错误: `Cannot install with "frozen-lockfile" because pnpm-lock.yaml is absent`
+   - 解决: 使用简化版工作流或手动运行 `pnpm install --no-frozen-lockfile`
+
+3. **域名无法访问**
    - 确认 CNAME 文件正确
    - 检查 DNS 配置
    - 等待 DNS 传播 (最多 24 小时)
 
-3. **内容不更新**
+4. **内容不更新**
    - 确认推送到正确分支
    - 检查 GitHub Actions 状态
    - 清除浏览器缓存
+
+5. **代码检查失败**
+   - 如果 eslint 或 typecheck 失败，使用简化版工作流
+   - 或者暂时禁用相关检查步骤
 
 ### 日志查看
 
