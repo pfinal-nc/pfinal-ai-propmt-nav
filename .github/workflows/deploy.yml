@@ -1,12 +1,15 @@
-# Sample workflow for building and deploying a Nuxt site to GitHub Pages
+# AI提示词导航站 - GitHub Pages 部署工作流
 #
-# To get started with Nuxt see: https://nuxtjs.org/docs/getting-started/installation
+# 自动构建并部署 Nuxt 3 应用到 GitHub Pages
+# 自定义域名: pnav.friday-go.icu
 #
-name: Deploy to GitHub Pages
+name: Deploy AI Prompts Nav to GitHub Pages
 
 on:
   push:
-    branches: ["master"]
+    branches: ["main", "master"]
+  pull_request:
+    branches: ["main", "master"]
   workflow_dispatch:
 
 permissions:
@@ -18,49 +21,110 @@ concurrency:
   group: "pages"
   cancel-in-progress: false
 
+env:
+  NODE_VERSION: "20"
+  PNPM_VERSION: "latest"
+
 jobs:
-  build:
+  # 构建和测试任务
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0  # 获取完整历史用于内容生成
         
       - name: Setup pnpm
-        uses: pnpm/action-setup@v2
+        uses: pnpm/action-setup@v4
         with:
-          version: latest
+          version: ${{ env.PNPM_VERSION }}
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
-          node-version: "20"
+          node-version: ${{ env.NODE_VERSION }}
           cache: "pnpm"
           
       - name: Install dependencies
-        run: pnpm install
+        run: pnpm install --frozen-lockfile
+
+      - name: Lint code
+        run: pnpm run lint
+        continue-on-error: true
+
+      - name: Type check
+        run: pnpm run typecheck
+        continue-on-error: true
 
       - name: Build for production
         run: pnpm run build
         env:
           NODE_ENV: production
+          NUXT_PUBLIC_SITE_URL: https://pnav.friday-go.icu
 
       - name: Generate static site
         run: pnpm run generate
         env:
           NODE_ENV: production
+          NUXT_PUBLIC_SITE_URL: https://pnav.friday-go.icu
+
+      - name: Copy static files
+        run: |
+          cp CNAME .output/public/CNAME
+          cp public/favicon.ico .output/public/favicon.ico
+          cp public/robots.txt .output/public/robots.txt
+
+      - name: Create sitemap
+        run: |
+          echo "<?xml version=\"1.0\" encoding=\"UTF-8\"?>" > .output/public/sitemap.xml
+          echo "<urlset xmlns=\"http://www.sitemaps.org/schemas/sitemap/0.9\">" >> .output/public/sitemap.xml
+          echo "  <url>" >> .output/public/sitemap.xml
+          echo "    <loc>https://pnav.friday-go.icu/</loc>" >> .output/public/sitemap.xml
+          echo "    <lastmod>$(date -u +%Y-%m-%d)</lastmod>" >> .output/public/sitemap.xml
+          echo "    <changefreq>daily</changefreq>" >> .output/public/sitemap.xml
+          echo "    <priority>1.0</priority>" >> .output/public/sitemap.xml
+          echo "  </url>" >> .output/public/sitemap.xml
+          echo "  <url>" >> .output/public/sitemap.xml
+          echo "    <loc>https://pnav.friday-go.icu/prompts</loc>" >> .output/public/sitemap.xml
+          echo "    <lastmod>$(date -u +%Y-%m-%d)</lastmod>" >> .output/public/sitemap.xml
+          echo "    <changefreq>daily</changefreq>" >> .output/public/sitemap.xml
+          echo "    <priority>0.8</priority>" >> .output/public/sitemap.xml
+          echo "  </url>" >> .output/public/sitemap.xml
+          echo "</urlset>" >> .output/public/sitemap.xml
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
           path: ./.output/public
 
+  # 部署任务
   deploy:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
     runs-on: ubuntu-latest
-    needs: build
+    needs: build-and-test
+    if: github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master'
     steps:
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
+
+  # 部署通知任务
+  notify:
+    runs-on: ubuntu-latest
+    needs: deploy
+    if: always() && (github.ref == 'refs/heads/main' || github.ref == 'refs/heads/master')
+    steps:
+      - name: Deployment Status
+        run: |
+          if [ "${{ needs.deploy.result }}" == "success" ]; then
+            echo "✅ 部署成功!"
+            echo "🌐 网站地址: https://pnav.friday-go.icu"
+            echo "📅 部署时间: $(date -u '+%Y-%m-%d %H:%M:%S UTC')"
+            echo "🔗 GitHub Pages: ${{ needs.deploy.outputs.page_url }}"
+          else
+            echo "❌ 部署失败!"
+            echo "请检查构建日志以获取详细信息"
+          fi
