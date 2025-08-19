@@ -198,18 +198,30 @@ const prompt = promptRef.value
 
 // 页面元数据
 useHead(() => ({
-  title: `${prompt?.title || '提示词详情'} - AI提示词导航站 | ${prompt?.category || 'AI工具'}`,
+  title: `${prompt?.title || '提示词详情'} - ${getCategoryName(prompt?.category) || 'AI工具'} | AI提示词导航站`,
   meta: [
-    { name: 'description', content: prompt?.description || '查看AI提示词详情，获取实用的AI工具使用技巧和模板。' },
-    { name: 'keywords', content: `${prompt?.title || 'AI提示词'},${prompt?.category || 'AI工具'},ChatGPT,Claude,Gemini,AI工具,提示词模板` },
-    { property: 'og:title', content: `${prompt?.title || '提示词详情'} - AI提示词导航站` },
-    { property: 'og:description', content: prompt?.description || '查看AI提示词详情，获取实用的AI工具使用技巧和模板。' },
+    { 
+      name: 'description', 
+      content: `${prompt?.description || '查看AI提示词详情'}。适用于ChatGPT、Claude、Gemini等AI工具，提升${getCategoryName(prompt?.category) || 'AI工具'}效率的实用模板。` 
+    },
+    { 
+      name: 'keywords', 
+      content: `${prompt?.title || 'AI提示词'},${getCategoryName(prompt?.category) || 'AI工具'},${prompt?.tags?.join(',') || ''}ChatGPT提示词,Claude提示词,Gemini提示词,AI工具,提示词模板` 
+    },
+    { property: 'og:title', content: `${prompt?.title || '提示词详情'} - ${getCategoryName(prompt?.category) || 'AI工具'} | AI提示词导航站` },
+    { 
+      property: 'og:description', 
+      content: `${prompt?.description || '查看AI提示词详情'}。适用于ChatGPT、Claude、Gemini等AI工具，提升${getCategoryName(prompt?.category) || 'AI工具'}效率的实用模板。` 
+    },
     { property: 'og:type', content: 'article' },
-    { property: 'article:section', content: prompt?.category || 'AI工具' },
+    { property: 'article:section', content: getCategoryName(prompt?.category) || 'AI工具' },
     { property: 'article:tag', content: prompt?.tags?.join(', ') || 'AI提示词' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: `${prompt?.title || '提示词详情'} - AI提示词导航站` },
-    { name: 'twitter:description', content: prompt?.description || '查看AI提示词详情，获取实用的AI工具使用技巧和模板。' }
+    { name: 'twitter:title', content: `${prompt?.title || '提示词详情'} - ${getCategoryName(prompt?.category) || 'AI工具'} | AI提示词导航站` },
+    { 
+      name: 'twitter:description', 
+      content: `${prompt?.description || '查看AI提示词详情'}。适用于ChatGPT、Claude、Gemini等AI工具，提升${getCategoryName(prompt?.category) || 'AI工具'}效率的实用模板。` 
+    }
   ],
   link: [
     { rel: 'canonical', href: `https://pnav.friday-go.icu/prompts/${category}-${slug}` }
@@ -238,7 +250,7 @@ useHead(() => ({
           '@id': `https://pnav.friday-go.icu/prompts/${category}-${slug}`
         },
         keywords: prompt?.tags?.join(', ') || 'AI提示词',
-        articleSection: prompt?.category
+        articleSection: getCategoryName(prompt?.category)
       })
     },
     {
