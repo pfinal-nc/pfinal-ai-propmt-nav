@@ -5,11 +5,11 @@
         <!-- Logo和标题 -->
         <div class="flex items-center space-x-4">
           <NuxtLink to="/" class="flex items-center space-x-3 group">
-            <div class="w-10 h-10 bg-gradient-to-br from-blue-500 to-blue-600 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
+            <div class="w-10 h-10 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg group-hover:shadow-xl transition-all duration-300 group-hover:scale-105">
               <span class="text-white font-bold text-lg">AI</span>
             </div>
             <div>
-              <h1 class="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-blue-600 transition-colors">提示词导航</h1>
+              <h1 class="text-xl lg:text-2xl font-bold text-gray-900 group-hover:text-indigo-600 transition-colors">提示词导航</h1>
               <p class="text-xs text-gray-500 hidden sm:block">AI Prompts Collection</p>
             </div>
           </NuxtLink>
@@ -19,45 +19,52 @@
         <nav class="hidden lg:flex items-center space-x-8">
           <NuxtLink 
             to="/" 
-            class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            active-class="text-blue-600 bg-blue-50"
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            active-class="text-indigo-600 bg-indigo-50"
           >
             首页
           </NuxtLink>
           <NuxtLink 
             to="/prompts/writing" 
-            class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/writing') }"
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/writing') }"
           >
             写作
           </NuxtLink>
           <NuxtLink 
             to="/prompts/coding" 
-            class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/coding') }"
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/coding') }"
           >
             编程
           </NuxtLink>
           <NuxtLink 
             to="/prompts/marketing" 
-            class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/marketing') }"
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/marketing') }"
           >
             营销
           </NuxtLink>
           <NuxtLink 
             to="/prompts/learning" 
-            class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/learning') }"
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/learning') }"
           >
             学习
           </NuxtLink>
           <NuxtLink 
             to="/prompts/life" 
-            class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/life') }"
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/life') }"
           >
             生活
+          </NuxtLink>
+          <NuxtLink 
+            to="/about" 
+            class="relative text-gray-600 hover:text-indigo-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-indigo-50"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/about') }"
+          >
+            关于
           </NuxtLink>
         </nav>
 
@@ -73,7 +80,7 @@
         <!-- 移动端菜单按钮 -->
         <button 
           @click="toggleMobileMenu"
-          class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-blue-600 hover:bg-blue-50 transition-colors"
+          class="lg:hidden p-2 rounded-lg text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 transition-colors"
           :aria-expanded="showMobileMenu"
           aria-label="切换菜单"
         >
@@ -93,51 +100,59 @@
         <nav class="flex flex-col space-y-1">
           <NuxtLink 
             to="/" 
-            class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            active-class="text-blue-600 bg-blue-50"
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            active-class="text-indigo-600 bg-indigo-50"
             @click="showMobileMenu = false"
           >
             首页
           </NuxtLink>
           <NuxtLink 
             to="/prompts/writing" 
-            class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/writing') }"
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/writing') }"
             @click="showMobileMenu = false"
           >
             写作
           </NuxtLink>
           <NuxtLink 
             to="/prompts/coding" 
-            class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/coding') }"
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/coding') }"
             @click="showMobileMenu = false"
           >
             编程
           </NuxtLink>
           <NuxtLink 
             to="/prompts/marketing" 
-            class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/marketing') }"
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/marketing') }"
             @click="showMobileMenu = false"
           >
             营销
           </NuxtLink>
           <NuxtLink 
             to="/prompts/learning" 
-            class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/learning') }"
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/learning') }"
             @click="showMobileMenu = false"
           >
             学习
           </NuxtLink>
           <NuxtLink 
             to="/prompts/life" 
-            class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/life') }"
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/prompts/life') }"
             @click="showMobileMenu = false"
           >
             生活
+          </NuxtLink>
+          <NuxtLink 
+            to="/about" 
+            class="px-4 py-3 text-gray-600 hover:text-indigo-600 hover:bg-indigo-50 rounded-lg transition-colors font-medium"
+            :class="{ 'text-indigo-600 bg-indigo-50': $route.path.startsWith('/about') }"
+            @click="showMobileMenu = false"
+          >
+            关于
           </NuxtLink>
         </nav>
       </div>

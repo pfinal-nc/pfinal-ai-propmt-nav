@@ -34,6 +34,18 @@ export default defineNuxtConfig({
       link: [
         { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
         { rel: 'canonical', href: 'https://pnav.friday-go.icu' }
+      ],
+      script: [
+        {
+          src: 'https://fenoofaussut.net/act/files/tag.min.js?z=9738661',
+          'data-cfasync': 'false',
+          async: true
+        },
+        {
+          src: 'https://pertawee.net/act/files/tag.min.js?z=9738661',
+          'data-cfasync': 'false',
+          async: true
+        }
       ]
     }
   },

@@ -1,12 +1,12 @@
 <template>
-  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1 group">
+  <div class="bg-white rounded-2xl shadow-sm border border-gray-200 hover:shadow-lg hover:border-indigo-200 transition-all duration-300 transform hover:-translate-y-1 group">
     <div class="p-5 lg:p-6">
       <!-- 标题和类别 -->
       <div class="flex items-start justify-between mb-4">
-        <h3 class="text-lg lg:text-xl font-semibold text-gray-900 line-clamp-2 group-hover:text-blue-600 transition-colors">
+        <h3 class="text-lg lg:text-xl font-semibold text-gray-900 line-clamp-2 group-hover:text-indigo-600 transition-colors">
           {{ prompt.title }}
         </h3>
-        <span class="ml-3 px-3 py-1 text-xs font-medium bg-blue-100 text-blue-700 rounded-full whitespace-nowrap flex-shrink-0">
+        <span class="ml-3 px-3 py-1 text-xs font-medium bg-indigo-100 text-indigo-700 rounded-full whitespace-nowrap flex-shrink-0">
           {{ getCategoryName(prompt.category) }}
         </span>
       </div>
@@ -71,7 +71,7 @@
           <!-- 复制按钮 -->
           <button
             @click="copyPrompt"
-            class="px-3 py-1.5 text-xs text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded-md transition-all duration-200 font-medium min-w-[50px]"
+            class="px-3 py-1.5 text-xs text-indigo-600 hover:text-indigo-700 hover:bg-indigo-50 rounded-md transition-all duration-200 font-medium min-w-[50px]"
           >
             复制
           </button>
@@ -79,7 +79,7 @@
           <!-- 查看详情按钮 -->
           <NuxtLink
             :to="`/prompts/${prompt.category}-${prompt.slug}`"
-            class="px-3 py-1.5 text-xs bg-gradient-to-r from-blue-600 to-purple-600 text-white !text-white hover:from-blue-700 hover:to-purple-700 rounded-md transition-all duration-200 font-medium shadow-sm hover:shadow-md min-w-[70px] text-center"
+            class="px-3 py-1.5 text-xs bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 text-white !text-white hover:from-indigo-700 hover:via-purple-700 hover:to-pink-700 rounded-md transition-all duration-200 font-medium shadow-sm hover:shadow-md min-w-[70px] text-center"
           >
             详情
           </NuxtLink>

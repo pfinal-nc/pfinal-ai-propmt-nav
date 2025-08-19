@@ -8,7 +8,7 @@
         <div class="mb-8">
           <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
             AI提示词
-            <span class="bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
+            <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
               导航站
             </span>
           </h1>
@@ -28,19 +28,19 @@
         <!-- 统计信息 -->
         <div class="flex justify-center items-center space-x-8 text-sm text-gray-500">
           <div class="flex items-center space-x-2">
-            <svg class="w-5 h-5 text-blue-500" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <span>1000+ 精选提示词</span>
           </div>
           <div class="flex items-center space-x-2">
-            <svg class="w-5 h-5 text-green-500" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <span>5+ 主要分类</span>
           </div>
           <div class="flex items-center space-x-2">
-            <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
+            <svg class="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
             <span>持续更新</span>
@@ -65,16 +65,16 @@
           v-for="category in categories" 
           :key="category.key"
           :to="`/prompts/${category.key}`"
-          class="group bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8 text-center hover:shadow-lg hover:border-blue-200 transition-all duration-300 transform hover:-translate-y-1"
+          class="group bg-white rounded-2xl shadow-sm border border-gray-200 p-6 lg:p-8 text-center hover:shadow-lg hover:border-indigo-200 transition-all duration-300 transform hover:-translate-y-1"
         >
           <div class="text-3xl lg:text-4xl mb-4 group-hover:scale-110 transition-transform duration-300">
             {{ getCategoryIcon(category.key) }}
           </div>
-          <h3 class="font-semibold text-gray-900 text-lg mb-2 group-hover:text-blue-600 transition-colors">
+          <h3 class="font-semibold text-gray-900 text-lg mb-2 group-hover:text-indigo-600 transition-colors">
             {{ category.name }}
           </h3>
           <p class="text-sm text-gray-500 mb-3">{{ category.count }} 个提示词</p>
-          <div class="w-8 h-1 bg-blue-500 mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
+          <div class="w-8 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </NuxtLink>
       </div>
     </section>

@@ -10,12 +10,12 @@
         @blur="handleBlur"
         type="text"
         placeholder="搜索提示词... 例如：写作、编程、营销"
-        class="w-full px-4 py-2.5 pl-12 pr-10 text-gray-900 bg-white/80 backdrop-blur-sm border-2 border-gray-200/60 rounded-xl shadow-soft focus:outline-none focus:ring-4 focus:ring-blue-500/20 focus:border-blue-500 focus:bg-white transition-all duration-300 text-sm placeholder-gray-400"
+        class="w-full px-4 py-2.5 pl-12 pr-10 text-gray-900 bg-white/80 backdrop-blur-sm border-2 border-gray-200/60 rounded-xl shadow-soft focus:outline-none focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white transition-all duration-300 text-sm placeholder-gray-400"
       >
       
       <!-- 搜索图标 -->
       <div class="absolute inset-y-0 left-0 flex items-center pl-4">
-        <svg class="w-4 h-4 text-gray-400 group-focus-within:text-blue-500 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+        <svg class="w-4 h-4 text-gray-400 group-focus-within:text-indigo-500 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
       </div>
@@ -42,7 +42,7 @@
             v-for="suggestion in filteredSuggestions.slice(0, 5)"
             :key="suggestion"
             @mousedown="selectSuggestion(suggestion)"
-            class="px-3 py-2 hover:bg-blue-50 cursor-pointer transition-colors duration-150"
+            class="px-3 py-2 hover:bg-indigo-50 cursor-pointer transition-colors duration-150"
           >
             <div class="flex items-center space-x-2">
               <svg class="w-3 h-3 text-gray-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
@@ -67,7 +67,7 @@
         v-for="tag in popularTags"
         :key="tag"
         @click="selectTag(tag)"
-        class="px-3 py-1.5 text-xs bg-white/60 backdrop-blur-sm border border-gray-200/60 text-gray-700 rounded-full hover:bg-blue-50 hover:border-blue-200 hover:text-blue-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md hover:scale-105"
+        class="px-3 py-1.5 text-xs bg-white/60 backdrop-blur-sm border border-gray-200/60 text-gray-700 rounded-full hover:bg-indigo-50 hover:border-indigo-200 hover:text-indigo-700 transition-all duration-200 font-medium shadow-sm hover:shadow-md hover:scale-105"
       >
         {{ tag }}
       </button>
@@ -76,7 +76,7 @@
     <!-- 搜索统计信息 -->
     <div v-if="searchQuery && searchStats" class="mt-3 text-center">
       <p class="text-sm text-gray-500">
-        找到 <span class="font-semibold text-blue-600">{{ searchStats.count }}</span> 个相关提示词
+        找到 <span class="font-semibold text-indigo-600">{{ searchStats.count }}</span> 个相关提示词
         <span v-if="searchStats.time" class="text-gray-400">· 用时 {{ searchStats.time }}ms</span>
       </p>
     </div>
