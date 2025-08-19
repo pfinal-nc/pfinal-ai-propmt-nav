@@ -1,1 +1,1 @@
-export { default } from "file:///Users/pfinal/Documents/pfinal-ai-propmt-nav/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"
+export { default } from "file:///Users/pfinal/Documents/pfinal-ai-propmt-nav/node_modules/.pnpm/@nuxt+vite-builder@4.0.1_eslint@9.32.0_rollup@2.79.2_typescript@5.8.3_vue@3.5.18/node_modules/@nuxt/vite-builder/dist/runtime/vite-node.mjs"

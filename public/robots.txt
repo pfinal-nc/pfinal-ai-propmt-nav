@@ -1,18 +1,12 @@
 User-agent: *
 Allow: /
 
+# 禁止访问管理页面（如果有的话）
+Disallow: /admin/
+Disallow: /api/
+
 # Sitemap
 Sitemap: https://pnav.friday-go.icu/sitemap.xml
 
-# Disallow admin and private areas
-Disallow: /admin/
-Disallow: /private/
-Disallow: /api/
-
-# Allow important pages
-Allow: /prompts/
-Allow: /search
-Allow: /category/
-
-# Crawl delay (optional)
+# 爬虫延迟（可选）
 Crawl-delay: 1

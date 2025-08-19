@@ -51,7 +51,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <PromptCard 
           v-for="prompt in sortedResults" 
-          :key="prompt._id" 
+          :key="prompt.slug" 
           :prompt="prompt" 
         />
       </div>
@@ -109,9 +109,22 @@ const sortBy = ref('relevance')
 const searchTime = ref(0)
 
 // 页面元数据
-useHead({
-  title: `搜索结果: ${route.query.q} - AI提示词导航站`
-})
+useHead(() => ({
+  title: route.query.q ? `搜索"${route.query.q}" - AI提示词导航站` : '搜索AI提示词 - AI提示词导航站',
+  meta: [
+    { name: 'description', content: route.query.q ? `搜索"${route.query.q}"相关的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的实用提示词模板。` : '搜索AI提示词，找到最适合您需求的ChatGPT、Claude、Gemini等AI工具提示词模板。' },
+    { name: 'keywords', content: `${route.query.q || 'AI提示词'},搜索,ChatGPT,Claude,Gemini,AI工具,提示词模板` },
+    { property: 'og:title', content: route.query.q ? `搜索"${route.query.q}" - AI提示词导航站` : '搜索AI提示词 - AI提示词导航站' },
+    { property: 'og:description', content: route.query.q ? `搜索"${route.query.q}"相关的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的实用提示词模板。` : '搜索AI提示词，找到最适合您需求的ChatGPT、Claude、Gemini等AI工具提示词模板。' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: route.query.q ? `搜索"${route.query.q}" - AI提示词导航站` : '搜索AI提示词 - AI提示词导航站' },
+    { name: 'twitter:description', content: route.query.q ? `搜索"${route.query.q}"相关的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的实用提示词模板。` : '搜索AI提示词，找到最适合您需求的ChatGPT、Claude、Gemini等AI工具提示词模板。' }
+  ],
+  link: [
+    { rel: 'canonical', href: `https://pnav.friday-go.icu/search${route.query.q ? `?q=${route.query.q}` : ''}` }
+  ]
+}))
 
 // 获取所有提示词
 const allPrompts = await usePrompts()

@@ -3,7 +3,7 @@
     <!-- 分类页面头部 -->
     <div class="mb-8">
       <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
-        <NuxtLink to="/" class="hover:text-primary-600">首页</NuxtLink>
+        <NuxtLink to="/" class="hover:text-blue-600">首页</NuxtLink>
         <span>/</span>
         <span class="text-gray-900">{{ categoryInfo.name }}</span>
       </nav>
@@ -32,7 +32,7 @@
           <select 
             v-model="sortBy" 
             @change="handleSort"
-            class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary-500"
+            class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
             <option value="newest">最新发布</option>
             <option value="popular">最受欢迎</option>
@@ -45,7 +45,7 @@
               @click="viewMode = 'grid'"
               :class="[
                 'p-2 rounded-md',
-                viewMode === 'grid' ? 'bg-primary-100 text-primary-600' : 'text-gray-400 hover:text-gray-600'
+                viewMode === 'grid' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 hover:text-gray-600'
               ]"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -56,7 +56,7 @@
               @click="viewMode = 'list'"
               :class="[
                 'p-2 rounded-md',
-                viewMode === 'list' ? 'bg-primary-100 text-primary-600' : 'text-gray-400 hover:text-gray-600'
+                viewMode === 'list' ? 'bg-blue-100 text-blue-600' : 'text-gray-400 hover:text-gray-600'
               ]"
             >
               <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
@@ -74,7 +74,7 @@
       <div v-if="viewMode === 'grid'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <PromptCard 
           v-for="prompt in paginatedPrompts" 
-          :key="prompt._id" 
+          :key="prompt.slug" 
           :prompt="prompt" 
         />
       </div>
@@ -83,7 +83,7 @@
       <div v-else class="space-y-4">
         <div
           v-for="prompt in paginatedPrompts"
-          :key="prompt._id"
+          :key="prompt.slug"
           class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 hover:shadow-md transition-shadow"
         >
           <div class="flex items-start justify-between">
@@ -118,12 +118,12 @@
               </div>
             </div>
             <div class="ml-4 flex items-center space-x-2">
-              <button class="px-3 py-1 text-sm text-primary-600 hover:text-primary-700 hover:bg-primary-50 rounded transition-colors">
+              <button class="px-3 py-1 text-sm text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded transition-colors">
                 复制
               </button>
               <NuxtLink
-                :to="`/prompts/${prompt.category}/${prompt._path.split('/').pop()}`"
-                class="px-3 py-1 text-sm bg-primary-600 text-white hover:bg-primary-700 rounded transition-colors"
+                :to="`/prompts/${prompt.category}-${prompt.slug}`"
+                class="px-3 py-1 text-sm bg-blue-600 text-white hover:bg-blue-700 rounded transition-colors"
               >
                 查看详情
               </NuxtLink>
@@ -140,7 +140,7 @@
       <p class="text-gray-600 mb-4">该分类下还没有提示词，或者没有匹配搜索条件的结果</p>
       <NuxtLink
         to="/"
-        class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+        class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
       >
         浏览所有提示词
       </NuxtLink>
@@ -218,12 +218,22 @@ const categoryInfo = computed(() => {
 })
 
 // 页面元数据
-useHead({
-  title: `${categoryInfo.value.name} - AI提示词导航站`,
+useHead(() => ({
+  title: `${categoryInfo.value.name}提示词 - AI提示词导航站 | ${categoryInfo.value.description}`,
   meta: [
-    { name: 'description', content: categoryInfo.value.description }
+    { name: 'description', content: `${categoryInfo.value.description}。浏览${categoryInfo.value.name}分类下的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的实用提示词模板。` },
+    { name: 'keywords', content: `${categoryInfo.value.name},AI提示词,ChatGPT提示词,Claude提示词,Gemini提示词,AI工具,提示词模板` },
+    { property: 'og:title', content: `${categoryInfo.value.name}提示词 - AI提示词导航站` },
+    { property: 'og:description', content: `${categoryInfo.value.description}。浏览${categoryInfo.value.name}分类下的AI提示词。` },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: `${categoryInfo.value.name}提示词 - AI提示词导航站` },
+    { name: 'twitter:description', content: `${categoryInfo.value.description}。浏览${categoryInfo.value.name}分类下的AI提示词。` }
+  ],
+  link: [
+    { rel: 'canonical', href: `https://your-domain.com/prompts/${category}` }
   ]
-})
+}))
 
 // 响应式数据
 const searchQuery = ref('')
@@ -258,10 +268,11 @@ const filteredPrompts = computed(() => {
       result.sort((a, b) => (b.views || 0) - (a.views || 0))
       break
     case 'name':
-      result.sort((a, b) => a.title.localeCompare(b.title))
+      result.sort((a, b) => (a.title || '').localeCompare(b.title || ''))
       break
     default:
-      result.sort((a, b) => b._id.localeCompare(a._id))
+      // 使用slug作为默认排序
+      result.sort((a, b) => (a.slug || '').localeCompare(b.slug || ''))
   }
 
   return result
@@ -285,8 +296,8 @@ const handleSort = () => {
   currentPage.value = 1
 }
 
-// 404处理
-if (!categoryMap[category]) {
+// 404处理 - 只在客户端执行
+if (process.client && !categoryMap[category]) {
   throw createError({
     statusCode: 404,
     statusMessage: '分类不存在'

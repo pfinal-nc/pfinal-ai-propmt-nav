@@ -26,12 +26,6 @@ html {
   scroll-behavior: smooth;
 }
 
-body {
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-  line-height: 1.6;
-  color: #374151;
-}
-
 /* 自定义滚动条 */
 ::-webkit-scrollbar {
   width: 8px;
@@ -50,51 +44,10 @@ body {
   background: #94a3b8;
 }
 
-/* 链接样式 */
-a {
-  color: inherit;
-  text-decoration: none;
-}
-
-/* 按钮基础样式 */
-button {
-  cursor: pointer;
-  border: none;
-  background: none;
-  font-family: inherit;
-}
-
-button:disabled {
-  cursor: not-allowed;
-  opacity: 0.6;
-}
-
-/* 输入框基础样式 */
-input, textarea, select {
-  font-family: inherit;
-}
-
-/* 响应式图片 */
-img {
-  max-width: 100%;
-  height: auto;
-}
-
-/* 代码块样式 */
-pre, code {
-  font-family: 'SF Mono', Monaco, 'Cascadia Code', 'Roboto Mono', Consolas, 'Courier New', monospace;
-}
-
 /* 选中文本样式 */
 ::selection {
   background-color: #3b82f6;
   color: white;
-}
-
-/* 焦点样式 */
-:focus-visible {
-  outline: 2px solid #3b82f6;
-  outline-offset: 2px;
 }
 
 /* 动画 */

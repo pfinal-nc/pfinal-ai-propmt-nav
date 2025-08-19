@@ -78,7 +78,7 @@
           
           <!-- 查看详情按钮 -->
           <NuxtLink
-            :to="`/prompt/${prompt._id}`"
+            :to="`/prompts/${prompt.category}-${prompt.slug}`"
             class="px-3 py-1.5 text-xs bg-gradient-to-r from-blue-600 to-purple-600 text-white !text-white hover:from-blue-700 hover:to-purple-700 rounded-md transition-all duration-200 font-medium shadow-sm hover:shadow-md min-w-[70px] text-center"
           >
             详情
@@ -110,7 +110,7 @@ const getPromptPreview = (promptBody) => {
   return text
 }
 
-const copyPrompt = async () => {
+const copyPrompt = async (event) => {
   try {
     // 确保 body 是字符串
     const bodyText = typeof props.prompt.body === 'string' 

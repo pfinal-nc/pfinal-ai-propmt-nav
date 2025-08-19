@@ -27,35 +27,35 @@
           <NuxtLink 
             to="/prompts/writing" 
             class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/writing') }"
           >
             写作
           </NuxtLink>
           <NuxtLink 
             to="/prompts/coding" 
             class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/coding') }"
           >
             编程
           </NuxtLink>
           <NuxtLink 
             to="/prompts/marketing" 
             class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/marketing') }"
           >
             营销
           </NuxtLink>
           <NuxtLink 
             to="/prompts/learning" 
             class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/learning') }"
           >
             学习
           </NuxtLink>
           <NuxtLink 
             to="/prompts/life" 
             class="relative text-gray-600 hover:text-blue-600 transition-colors font-medium py-2 px-3 rounded-lg hover:bg-blue-50"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/life') }"
           >
             生活
           </NuxtLink>
@@ -102,7 +102,7 @@
           <NuxtLink 
             to="/prompts/writing" 
             class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/writing') }"
             @click="showMobileMenu = false"
           >
             写作
@@ -110,7 +110,7 @@
           <NuxtLink 
             to="/prompts/coding" 
             class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/coding') }"
             @click="showMobileMenu = false"
           >
             编程
@@ -118,7 +118,7 @@
           <NuxtLink 
             to="/prompts/marketing" 
             class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/marketing') }"
             @click="showMobileMenu = false"
           >
             营销
@@ -126,7 +126,7 @@
           <NuxtLink 
             to="/prompts/learning" 
             class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/learning') }"
             @click="showMobileMenu = false"
           >
             学习
@@ -134,7 +134,7 @@
           <NuxtLink 
             to="/prompts/life" 
             class="px-4 py-3 text-gray-600 hover:text-blue-600 hover:bg-blue-50 rounded-lg transition-colors font-medium"
-            active-class="text-blue-600 bg-blue-50"
+            :class="{ 'text-blue-600 bg-blue-50': $route.path.startsWith('/prompts/life') }"
             @click="showMobileMenu = false"
           >
             生活

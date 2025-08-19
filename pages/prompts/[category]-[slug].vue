@@ -1,11 +1,13 @@
 <template>
+
+  
   <div v-if="prompt">
     <!-- 面包屑导航 -->
     <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-6">
-      <NuxtLink to="/" class="hover:text-primary-600">首页</NuxtLink>
+      <NuxtLink to="/" class="hover:text-blue-600">首页</NuxtLink>
       <span>/</span>
-      <NuxtLink :to="`/prompts/${prompt.category}`" class="hover:text-primary-600">
-        {{ getCategoryName(prompt.category) }}
+      <NuxtLink :to="`/prompts/${category}`" class="hover:text-blue-600">
+        {{ getCategoryName(category) }}
       </NuxtLink>
       <span>/</span>
       <span class="text-gray-900">{{ prompt.title }}</span>
@@ -20,9 +22,9 @@
           <div class="mb-6">
             <div class="flex items-start justify-between mb-4">
               <h1 class="text-3xl font-bold text-gray-900">{{ prompt.title }}</h1>
-              <span class="px-3 py-1 text-sm font-medium bg-primary-100 text-primary-700 rounded-full">
-                {{ getCategoryName(prompt.category) }}
-              </span>
+                              <span class="px-3 py-1 text-sm font-medium bg-blue-100 text-blue-700 rounded-full">
+                  {{ getCategoryName(prompt.category) }}
+                </span>
             </div>
             
             <p class="text-lg text-gray-600 mb-4">{{ prompt.description }}</p>
@@ -54,7 +56,7 @@
           <div class="mb-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-4">提示词内容</h2>
             <div class="bg-gray-50 rounded-lg p-6 relative">
-              <pre class="text-sm text-gray-800 whitespace-pre-wrap font-mono leading-relaxed">{{ typeof prompt.body === 'string' ? prompt.body : JSON.stringify(prompt.body, null, 2) }}</pre>
+              <pre class="text-sm text-gray-800 whitespace-pre-wrap font-mono leading-relaxed">{{ prompt && prompt.body ? prompt.body : (prompt && prompt.content ? prompt.content : '内容加载中...') }}</pre>
               <button
                 @click="copyPrompt"
                 class="absolute top-4 right-4 px-3 py-1 text-sm bg-white text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
@@ -65,7 +67,7 @@
           </div>
           
           <!-- 标签 -->
-          <div v-if="prompt.tags && prompt.tags.length > 0" class="mb-8">
+          <div v-if="prompt && prompt.tags && prompt.tags.length > 0" class="mb-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-4">标签</h2>
             <div class="flex flex-wrap gap-2">
               <span
@@ -79,7 +81,7 @@
           </div>
           
           <!-- 使用技巧 -->
-          <div v-if="prompt.tips" class="mb-8">
+          <div v-if="prompt && prompt.tips" class="mb-8">
             <h2 class="text-xl font-semibold text-gray-900 mb-4">使用技巧</h2>
             <div class="bg-yellow-50 rounded-lg p-6">
               <ul class="space-y-2">
@@ -101,7 +103,7 @@
           <div class="flex items-center space-x-4">
             <button
               @click="copyPrompt"
-              class="flex items-center space-x-2 px-6 py-3 bg-primary-600 text-white rounded-lg hover:bg-primary-700 transition-colors"
+              class="flex items-center space-x-2 px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
             >
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
@@ -172,7 +174,7 @@
     <p class="text-gray-600 mb-4">您访问的提示词可能已被删除或不存在</p>
     <NuxtLink
       to="/"
-      class="px-4 py-2 bg-primary-600 text-white rounded-md hover:bg-primary-700 transition-colors"
+      class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
     >
       返回首页
     </NuxtLink>
@@ -191,31 +193,142 @@ const copied = ref(false)
 const liked = ref(false)
 
 // 获取提示词详情
-const prompt = await usePromptBySlug(category, slug)
+const promptRef = await usePromptBySlug(category, slug)
+const prompt = promptRef.value
 
 // 页面元数据
-useHead({
-  title: `${prompt.value?.title || '提示词详情'} - AI提示词导航站`,
+useHead(() => ({
+  title: `${prompt?.title || '提示词详情'} - AI提示词导航站 | ${prompt?.category || 'AI工具'}`,
   meta: [
-    { name: 'description', content: prompt.value?.description || '查看AI提示词详情' }
+    { name: 'description', content: prompt?.description || '查看AI提示词详情，获取实用的AI工具使用技巧和模板。' },
+    { name: 'keywords', content: `${prompt?.title || 'AI提示词'},${prompt?.category || 'AI工具'},ChatGPT,Claude,Gemini,AI工具,提示词模板` },
+    { property: 'og:title', content: `${prompt?.title || '提示词详情'} - AI提示词导航站` },
+    { property: 'og:description', content: prompt?.description || '查看AI提示词详情，获取实用的AI工具使用技巧和模板。' },
+    { property: 'og:type', content: 'article' },
+    { property: 'article:section', content: prompt?.category || 'AI工具' },
+    { property: 'article:tag', content: prompt?.tags?.join(', ') || 'AI提示词' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: `${prompt?.title || '提示词详情'} - AI提示词导航站` },
+    { name: 'twitter:description', content: prompt?.description || '查看AI提示词详情，获取实用的AI工具使用技巧和模板。' }
+  ],
+  link: [
+    { rel: 'canonical', href: `https://pnav.friday-go.icu/prompts/${category}-${slug}` }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'Article',
+        headline: prompt?.title,
+        description: prompt?.description,
+        author: {
+          '@type': 'Organization',
+          name: 'AI提示词导航站'
+        },
+        publisher: {
+          '@type': 'Organization',
+          name: 'AI提示词导航站',
+          url: 'https://pnav.friday-go.icu'
+        },
+        datePublished: new Date().toISOString(),
+        dateModified: new Date().toISOString(),
+        mainEntityOfPage: {
+          '@type': 'WebPage',
+          '@id': `https://pnav.friday-go.icu/prompts/${category}-${slug}`
+        },
+        keywords: prompt?.tags?.join(', ') || 'AI提示词',
+        articleSection: prompt?.category
+      })
+    },
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'BreadcrumbList',
+        itemListElement: [
+          {
+            '@type': 'ListItem',
+            position: 1,
+            name: '首页',
+            item: 'https://pnav.friday-go.icu'
+          },
+          {
+            '@type': 'ListItem',
+            position: 2,
+            name: getCategoryName(category),
+            item: `https://pnav.friday-go.icu/prompts/${category}`
+          },
+          {
+            '@type': 'ListItem',
+            position: 3,
+            name: prompt?.title || '提示词详情',
+            item: `https://pnav.friday-go.icu/prompts/${category}-${slug}`
+          }
+        ]
+      })
+    }
   ]
-})
+}))
 
 // 方法
 const copyPrompt = async () => {
+  // 尝试多种字段
+  let bodyText = ''
+  if (prompt?.body && typeof prompt.body === 'string') {
+    bodyText = prompt.body
+  } else if (prompt?.content && typeof prompt.content === 'string') {
+    bodyText = prompt.content
+  } else {
+    // 安全地序列化对象，避免循环引用
+    try {
+      bodyText = JSON.stringify({
+        title: prompt?.title,
+        description: prompt?.description,
+        body: prompt?.body,
+        content: prompt?.content,
+        tags: prompt?.tags
+      }, null, 2)
+    } catch (jsonErr) {
+      bodyText = prompt?.body || prompt?.content || '内容不可用'
+    }
+  }
+  
   try {
-    // 确保 body 是字符串
-    const bodyText = typeof prompt.value.body === 'string' 
-      ? prompt.value.body 
-      : JSON.stringify(prompt.value.body)
+    // 检查 clipboard API 是否可用
+    if (!navigator.clipboard) {
+      // 备用方法：创建临时文本区域
+      const textArea = document.createElement('textarea')
+      textArea.value = bodyText
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textArea)
+    } else {
+      await navigator.clipboard.writeText(bodyText)
+    }
     
-    await navigator.clipboard.writeText(bodyText)
     copied.value = true
     setTimeout(() => {
       copied.value = false
     }, 2000)
   } catch (err) {
     console.error('复制失败:', err)
+    // 尝试备用方法
+    try {
+      const textArea = document.createElement('textarea')
+      textArea.value = bodyText || '复制失败'
+      document.body.appendChild(textArea)
+      textArea.select()
+      document.execCommand('copy')
+      document.body.removeChild(textArea)
+      copied.value = true
+      setTimeout(() => {
+        copied.value = false
+      }, 2000)
+    } catch (backupErr) {
+      console.error('备用复制方法也失败:', backupErr)
+    }
   }
 }
 
@@ -228,8 +341,8 @@ const sharePrompt = async () => {
   if (navigator.share) {
     try {
       await navigator.share({
-        title: prompt.value.title,
-        text: prompt.value.description,
+        title: prompt.title,
+        text: prompt.description,
         url: window.location.href
       })
     } catch (err) {
@@ -246,8 +359,8 @@ const sharePrompt = async () => {
   }
 }
 
-// 如果提示词不存在，显示404
-if (!prompt.value) {
+// 如果提示词不存在，显示404 - 只在客户端执行
+if (process.client && !prompt) {
   throw createError({
     statusCode: 404,
     statusMessage: '提示词不存在'

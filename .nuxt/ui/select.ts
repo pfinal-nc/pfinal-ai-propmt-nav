@@ -187,7 +187,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-primary"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-primary"
     },
     {
       "color": "secondary" as typeof color[number],
@@ -195,7 +195,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-secondary"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-secondary"
     },
     {
       "color": "success" as typeof color[number],
@@ -203,7 +203,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-success"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-success"
     },
     {
       "color": "info" as typeof color[number],
@@ -211,7 +211,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-info"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-info"
     },
     {
       "color": "warning" as typeof color[number],
@@ -219,7 +219,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-warning"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-warning"
     },
     {
       "color": "error" as typeof color[number],
@@ -227,7 +227,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-error"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-error"
     },
     {
       "color": "primary" as typeof color[number],
@@ -265,7 +265,7 @@ export default {
         "outline" as typeof variant[number],
         "subtle" as typeof variant[number]
       ],
-      "class": "focus:ring-2 focus:ring-inset focus:ring-inverted"
+      "class": "focus-visible:ring-2 focus-visible:ring-inset focus-visible:ring-inverted"
     },
     {
       "color": "neutral" as typeof color[number],

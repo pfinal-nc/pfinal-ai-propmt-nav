@@ -1,4 +1,6 @@
 <template>
+
+  
   <div class="space-y-16 lg:space-y-24">
     <!-- 英雄区域 -->
     <section class="text-center py-12 lg:py-20">
@@ -91,7 +93,7 @@
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
         <PromptCard 
           v-for="prompt in prompts.slice(0, 6)" 
-          :key="prompt._id" 
+          :key="prompt.slug" 
           :prompt="prompt" 
         />
       </div>
@@ -162,9 +164,36 @@ import { getCategoryIcon } from '~/utils/categories'
 
 // 页面元数据
 useHead({
-  title: 'AI提示词导航站 - 最全的AI Prompts集合',
+  title: 'AI提示词导航站 - 最全的AI Prompts集合 | ChatGPT、Claude、Gemini提示词',
   meta: [
-    { name: 'description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。涵盖写作、编程、营销、学习等各个领域。' }
+    { name: 'description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。涵盖写作、编程、营销、学习等各个领域，提升工作效率。' },
+    { name: 'keywords', content: 'AI提示词,ChatGPT提示词,Claude提示词,Gemini提示词,AI工具,提示词模板,写作助手,编程助手,营销工具,学习助手' },
+    { property: 'og:title', content: 'AI提示词导航站 - 最全的AI Prompts集合' },
+    { property: 'og:description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。涵盖写作、编程、营销、学习等各个领域。' },
+    { property: 'og:type', content: 'website' },
+    { name: 'twitter:card', content: 'summary_large_image' },
+    { name: 'twitter:title', content: 'AI提示词导航站 - 最全的AI Prompts集合' },
+    { name: 'twitter:description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。' }
+  ],
+  link: [
+    { rel: 'canonical', href: 'https://pnav.friday-go.icu' }
+  ],
+  script: [
+    {
+      type: 'application/ld+json',
+      children: JSON.stringify({
+        '@context': 'https://schema.org',
+        '@type': 'WebSite',
+        name: 'AI提示词导航站',
+        description: '收集最全面的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的写作、编程、营销、学习提示词',
+        url: 'https://pnav.friday-go.icu',
+        potentialAction: {
+          '@type': 'SearchAction',
+          target: 'https://pnav.friday-go.icu/search?q={search_term_string}',
+          'query-input': 'required name=search_term_string'
+        }
+      })
+    }
   ]
 })
 

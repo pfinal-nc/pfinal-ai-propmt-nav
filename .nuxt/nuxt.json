@@ -1,9 +1,9 @@
 {
-  "_hash": "j3X8GvM_nSO7ahwXPKbxluS1xcAIG0FBVLxESZjFxO0",
+  "_hash": "DMDU91DwPaUmVE4cClVieNMq7el6HI5_o3Pp67rhHtA",
   "project": {
     "rootDir": "/Users/pfinal/Documents/pfinal-ai-propmt-nav"
   },
   "versions": {
-    "nuxt": "3.18.1"
+    "nuxt": "4.0.1"
   }
 }
