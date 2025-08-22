@@ -43,11 +43,6 @@ export const categoryMap = {
     name: '数据分析',
     icon: '📊',
     description: '数据分析相关的提示词，包括数据分析、数据可视化、数据挖掘等'
-  },
-  analysis: {
-    name: '数据分析',
-    icon: '📊',
-    description: '数据分析相关的提示词，包括数据分析、数据可视化、数据挖掘等'
   }
 }
 
