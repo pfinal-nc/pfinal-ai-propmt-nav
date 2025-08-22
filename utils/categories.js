@@ -43,6 +43,16 @@ export const categoryMap = {
     name: '数据分析',
     icon: '📊',
     description: '数据分析相关的提示词，包括数据分析、数据可视化、数据挖掘等'
+  },
+  academic: {
+    name: '学术研究',
+    icon: '📚',
+    description: '学术研究相关的提示词，包括论文写作、文献综述、数据分析等'
+  },
+  other: {
+    name: '其他',
+    icon: '📁',
+    description: '其他相关的提示词，包括其他领域'
   }
 }
 
