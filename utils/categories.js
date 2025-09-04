@@ -49,6 +49,31 @@ export const categoryMap = {
     icon: '📚',
     description: '学术研究相关的提示词，包括论文写作、文献综述、数据分析等'
   },
+  education: {
+    name: '教育教学',
+    icon: '🏫',
+    description: '教育和教学相关的提示词，包括课程设计、学习计划等'
+  },
+  language: {
+    name: '语言学习',
+    icon: '🗣️',
+    description: '语言学习相关的提示词，包括对话练习、学习计划等'
+  },
+  'mental-health': {
+    name: '心理健康',
+    icon: '🧠',
+    description: '心理健康相关的提示词，包括情绪调节、正念冥想等'
+  },
+  'business-plan': {
+    name: '商业计划',
+    icon: '📈',
+    description: '商业计划相关的提示词，包括创业计划、商业模式等'
+  },
+  'content-creation': {
+    name: '内容创作',
+    icon: '📹',
+    description: '内容创作相关的提示词，包括视频脚本、社交媒体内容等'
+  },
   other: {
     name: '其他',
     icon: '📁',
