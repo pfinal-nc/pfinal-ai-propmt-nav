@@ -8,6 +8,7 @@ tags:
   - illustration
   - meta-prompt
   - artistic
+  - ai-art
 description: "生成任意场景的极简线条手绘风格绘图Prompt，追求线条的呼吸与神韵"
 ---
 
@@ -77,3 +78,9 @@ description: "生成任意场景的极简线条手绘风格绘图Prompt，追求
 3. 生成的Prompt可直接用于AI绘图工具（如Midjourney、DALL-E等）
 4. 强调线条的流畅性和留白的艺术性
 5. 追求本质而非细节的完美表达
+
+扩展应用：
+1. 可用于Logo设计、图标创作、插画等不同设计领域
+2. 适用于品牌视觉语言的建立
+3. 可作为设计灵感的启发工具
+4. 支持不同文化元素的线条化表达
