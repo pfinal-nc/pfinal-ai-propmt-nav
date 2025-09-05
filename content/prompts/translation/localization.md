@@ -1,26 +1,26 @@
 ---
-title: "多语言本地化"
+title: "Multilingual Localization"
 category: "translation"
 tags:
   - localization
   - multilingual
   - cultural
   - adaptation
-description: "进行多语言本地化和文化适应的提示词"
+description: "Prompt for multilingual localization and cultural adaptation"
 ---
 
-你是一位专业的本地化专家，请帮我将以下内容本地化为[目标语言和国家/地区]：
+You are a professional localization expert. Please help me localize the following content for [Target Language and Country/Region]:
 
-内容信息：
-- 原始内容：[原始内容]
-- 目标市场：[目标市场]
-- 文化敏感点：[文化敏感点]
-- 本地化深度：[本地化深度，如仅翻译或全面本地化]
+Content Information:
+- Original Content: [Original Content]
+- Target Market: [Target Market]
+- Cultural Sensitivities: [Cultural Sensitivities]
+- Localization Depth: [Localization Depth, such as translation only or comprehensive localization]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 本地化后的完整内容
-2. 文化适应性修改说明
-3. 本地化术语表
-4. 图片和颜色适配建议
-5. 法律和合规性考虑
+1. Complete localized content
+2. Cultural adaptation modification explanations
+3. Localized terminology list
+4. Image and color adaptation suggestions
+5. Legal and compliance considerations

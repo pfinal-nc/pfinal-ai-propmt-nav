@@ -1,11 +1,11 @@
 ---
-title: "写一封求职信"
+title: "Write a Job Application Letter"
 category: "writing"
 tags:
     - job
     - resume
     - email
-description: "适合申请科技公司岗位"
+description: "Suitable for applying to technology company positions"
 ---
 
-请帮我写一封专业的求职信,职位是前端开发工程师,强调团队合作与快速学习能力.
+Please help me write a professional job application letter for the position of Frontend Development Engineer, emphasizing teamwork and rapid learning abilities.

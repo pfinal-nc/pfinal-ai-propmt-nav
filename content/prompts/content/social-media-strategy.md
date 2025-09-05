@@ -1,44 +1,44 @@
 ---
-title: "社交媒体内容策划"
+title: "Social Media Content Strategy"
 category: "content-creation"
 tags:
   - social-media
   - content-strategy
   - marketing
   - engagement
-description: "为社交媒体平台策划内容的提示词"
+description: "Prompt for planning content for social media platforms"
 ---
 
-你是一位专业的社交媒体内容策略师。请帮我为[platform]平台策划一个月的内容发布计划，我的账号定位是[niche]。
+You are a professional social media content strategist. Please help me plan a one-month content publishing plan for the [platform] platform, with my account positioning being [niche].
 
-要求：
-1. 受众分析：
-   - 目标受众画像
-   - 内容偏好和行为习惯
-   - 最佳发布时间
+Requirements:
+1. Audience Analysis:
+   - Target audience persona
+   - Content preferences and behavioral habits
+   - Optimal posting times
 
-2. 内容主题规划：
-   - 确定每周主题
-   - 平衡不同内容类型（教育、娱乐、促销等）
-   - 节假日和热点话题规划
+2. Content Theme Planning:
+   - Determine weekly themes
+   - Balance different content types (educational, entertainment, promotional, etc.)
+   - Holiday and trending topic planning
 
-3. 内容形式建议：
-   - 适合平台的內容形式（图文、视频、直播等）
-   - 标题和文案风格
-   - 视觉设计建议
+3. Content Format Suggestions:
+   - Platform-appropriate content formats (images, videos, live streams, etc.)
+   - Title and copywriting style
+   - Visual design suggestions
 
-4. 互动策略：
-   - 提高用户参与度的方法
-   - 回复评论和私信的策略
-   - 社区建设建议
+4. Engagement Strategy:
+   - Methods to increase user engagement
+   - Strategies for responding to comments and DMs
+   - Community building suggestions
 
-5. 数据分析：
-   - 关键指标跟踪
-   - 效果评估方法
-   - 优化调整建议
+5. Data Analysis:
+   - Key metrics tracking
+   - Performance evaluation methods
+   - Optimization and adjustment suggestions
 
-6. 内容日历：
-   - 提供具体的内容发布计划表
-   - 包含发布时间、内容主题、内容形式等
+6. Content Calendar:
+   - Provide specific content publishing schedule
+   - Include posting times, content themes, content formats, etc.
 
-请根据我的行业特点和目标受众，提供具体可执行的建议。
+Please provide specific and actionable suggestions based on my industry characteristics and target audience.

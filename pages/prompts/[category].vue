@@ -1,9 +1,9 @@
 <template>
   <div>
-    <!-- 分类页面头部 -->
+    <!-- Category Page Header -->
     <div class="mb-8">
       <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-4">
-        <NuxtLink to="/" class="hover:text-blue-600">首页</NuxtLink>
+        <NuxtLink to="/" class="hover:text-blue-600">Home</NuxtLink>
         <span>/</span>
         <span class="text-gray-900">{{ categoryInfo.name }}</span>
       </nav>
@@ -17,11 +17,11 @@
       </div>
       
       <div class="flex items-center space-x-6 text-sm text-gray-600">
-        <span>{{ filteredPrompts.length }} 个提示词</span>
+        <span>{{ filteredPrompts.length }} prompts</span>
       </div>
     </div>
     
-    <!-- 搜索和排序 -->
+    <!-- Search and Sort -->
     <div class="mb-6">
       <div class="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
         <div class="flex-1 max-w-md">
@@ -34,10 +34,10 @@
             @change="handleSort"
             class="px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500"
           >
-            <option value="newest">最新发布</option>
-            <option value="popular">最受欢迎</option>
-            <option value="views">浏览最多</option>
-            <option value="name">按名称排序</option>
+            <option value="newest">Latest</option>
+            <option value="popular">Most Popular</option>
+            <option value="views">Most Viewed</option>
+            <option value="name">Sort by Name</option>
           </select>
           
           <div class="flex items-center space-x-2">
@@ -68,9 +68,9 @@
       </div>
     </div>
     
-    <!-- 提示词列表 -->
+    <!-- Prompts List -->
     <div v-if="filteredPrompts.length > 0">
-      <!-- 网格视图 -->
+      <!-- Grid View -->
       <div v-if="viewMode === 'grid'" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         <PromptCard 
           v-for="prompt in paginatedPrompts" 
@@ -79,7 +79,7 @@
         />
       </div>
       
-      <!-- 列表视图 -->
+      <!-- List View -->
       <div v-else class="space-y-4">
         <div
           v-for="prompt in paginatedPrompts"
@@ -119,13 +119,13 @@
             </div>
             <div class="ml-4 flex items-center space-x-2">
               <button class="px-3 py-1 text-sm text-blue-600 hover:text-blue-700 hover:bg-blue-50 rounded transition-colors">
-                复制
+                Copy
               </button>
               <NuxtLink
                 :to="`/prompts/${prompt.category}-${prompt.slug}`"
                 class="px-3 py-1 text-sm bg-blue-600 text-white hover:bg-blue-700 rounded transition-colors"
               >
-                查看详情
+                View Details
               </NuxtLink>
             </div>
           </div>
@@ -133,20 +133,20 @@
       </div>
     </div>
     
-    <!-- 空状态 -->
+    <!-- Empty State -->
     <div v-else class="text-center py-12">
       <div class="text-6xl mb-4">{{ categoryInfo.icon }}</div>
-      <h3 class="text-lg font-medium text-gray-900 mb-2">暂无相关提示词</h3>
-      <p class="text-gray-600 mb-4">该分类下还没有提示词，或者没有匹配搜索条件的结果</p>
+      <h3 class="text-lg font-medium text-gray-900 mb-2">No Related Prompts</h3>
+      <p class="text-gray-600 mb-4">There are no prompts in this category, or no results matching the search criteria</p>
       <NuxtLink
         to="/"
         class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
       >
-        浏览所有提示词
+        Browse All Prompts
       </NuxtLink>
     </div>
     
-    <!-- 分页 -->
+    <!-- Pagination -->
     <div v-if="totalPages > 1" class="mt-8 flex justify-center">
       <nav class="flex items-center space-x-2">
         <button
@@ -154,11 +154,11 @@
           :disabled="currentPage === 1"
           class="px-3 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          上一页
+          Previous
         </button>
         
         <span class="px-3 py-2 text-sm text-gray-600">
-          第 {{ currentPage }} 页，共 {{ totalPages }} 页
+          Page {{ currentPage }} of {{ totalPages }}
         </span>
         
         <button
@@ -166,7 +166,7 @@
           :disabled="currentPage === totalPages"
           class="px-3 py-2 text-sm border border-gray-300 rounded-md hover:bg-gray-50 disabled:opacity-50 disabled:cursor-not-allowed"
         >
-          下一页
+          Next
         </button>
       </nav>
     </div>
@@ -180,107 +180,107 @@ import { getCategoryName } from '~/utils/categories'
 const route = useRoute()
 const category = route.params.category
 
-// 分类信息映射
+// Category information mapping
 const categoryMap = {
   writing: {
-    name: '写作助手',
+    name: 'Writing Assistant',
     icon: '✍️',
-    description: '专业的写作辅助工具，帮助你创作各类文章、文案和内容'
+    description: 'Professional writing assistance tools to help you create articles, copy, and content'
   },
   coding: {
-    name: '编程开发',
+    name: 'Programming & Development',
     icon: '💻',
-    description: '编程相关的提示词，包括代码生成、调试、优化等'
+    description: 'Programming-related prompts including code generation, debugging, and optimization'
   },
   marketing: {
-    name: '营销文案',
+    name: 'Marketing & Copywriting',
     icon: '📢',
-    description: '营销推广相关的文案创作和策略制定工具'
+    description: 'Marketing and promotion-related copywriting and strategy development tools'
   },
   learning: {
-    name: '学习辅助',
+    name: 'Learning Assistant',
     icon: '📚',
-    description: '学习和教育相关的提示词，帮助提高学习效率'
+    description: 'Learning and education-related prompts to help improve learning efficiency'
   },
   life: {
-    name: '生活助手',
+    name: 'Life Assistant',
     icon: '🌟',
-    description: '日常生活相关的提示词，包括健康、心理、娱乐等'
+    description: 'Daily life-related prompts including health, psychology, entertainment, etc.'
   },
   design: {
-    name: '设计辅助',
+    name: 'Design Assistant',
     icon: '🎨',
-    description: '设计相关的提示词，包括UI设计、平面设计、3D设计等'
+    description: 'Design-related prompts including UI design, graphic design, 3D design, etc.'
   },
   translation: {
-    name: '翻译润色',
+    name: 'Translation & Editing',
     icon: '🌐',
-    description: '翻译相关的提示词，包括翻译、润色、校对等'
+    description: 'Translation-related prompts including translation, editing, and proofreading'
   },
   business: {
-    name: '商务办公',
+    name: 'Business & Office',
     icon: '💼',
-    description: '商务办公相关的提示词，包括会议纪要、报告撰写、数据分析等'
+    description: 'Business and office-related prompts including meeting minutes, report writing, data analysis, etc.'
   },
   data: {
-    name: '数据分析',
+    name: 'Data Analysis',
     icon: '📊',
-    description: '数据分析相关的提示词，包括数据分析、数据可视化、数据挖掘等'
+    description: 'Data analysis-related prompts including data analysis, visualization, and mining'
   },
   academic: {
-    name: '学术研究',
+    name: 'Academic Research',
     icon: '📚',
-    description: '学术研究相关的提示词，包括论文写作、文献综述、数据分析等'
+    description: 'Academic research-related prompts including paper writing, literature review, data analysis, etc.'
   },
   other: {
-    name: '其他',
+    name: 'Other',
     icon: '📁',
-    description: '其他相关的提示词，包括其他领域'
+    description: 'Other related prompts covering various fields'
   }
 }
 
 const categoryInfo = computed(() => {
   return categoryMap[category] || {
-    name: '未知分类',
+    name: 'Unknown Category',
     icon: '❓',
-    description: '分类信息不存在'
+    description: 'Category information does not exist'
   }
 })
 
-// 页面元数据
+// Page metadata
 useHead(() => ({
-  title: `${categoryInfo.value.name}提示词 - AI提示词导航站 | ${categoryInfo.value.description}`,
+  title: `${categoryInfo.value.name} Prompts - AI Prompts Navigation | ${categoryInfo.value.description}`,
   meta: [
-    { name: 'description', content: `${categoryInfo.value.description}。浏览${categoryInfo.value.name}分类下的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的实用提示词模板。` },
-    { name: 'keywords', content: `${categoryInfo.value.name},AI提示词,ChatGPT提示词,Claude提示词,Gemini提示词,AI工具,提示词模板` },
-    { property: 'og:title', content: `${categoryInfo.value.name}提示词 - AI提示词导航站` },
-    { property: 'og:description', content: `${categoryInfo.value.description}。浏览${categoryInfo.value.name}分类下的AI提示词。` },
+    { name: 'description', content: `${categoryInfo.value.description}. Browse AI prompts in the ${categoryInfo.value.name} category, including practical prompt templates for ChatGPT, Claude, Gemini and other AI tools.` },
+    { name: 'keywords', content: `${categoryInfo.value.name},AI prompts,ChatGPT prompts,Claude prompts,Gemini prompts,AI tools,prompt templates` },
+    { property: 'og:title', content: `${categoryInfo.value.name} Prompts - AI Prompts Navigation` },
+    { property: 'og:description', content: `${categoryInfo.value.description}. Browse AI prompts in the ${categoryInfo.value.name} category.` },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: `${categoryInfo.value.name}提示词 - AI提示词导航站` },
-    { name: 'twitter:description', content: `${categoryInfo.value.description}。浏览${categoryInfo.value.name}分类下的AI提示词。` }
+    { name: 'twitter:title', content: `${categoryInfo.value.name} Prompts - AI Prompts Navigation` },
+    { name: 'twitter:description', content: `${categoryInfo.value.description}. Browse AI prompts in the ${categoryInfo.value.name} category.` }
   ],
   link: [
     { rel: 'canonical', href: `https://your-domain.com/prompts/${category}` }
   ]
 }))
 
-// 响应式数据
+// Reactive data
 const searchQuery = ref('')
 const sortBy = ref('newest')
 const viewMode = ref('grid')
 const currentPage = ref(1)
 const pageSize = 12
 
-// 获取该分类的提示词数据
+// Get prompts data for this category
 const categoryPrompts = await usePromptsByCategory(category)
 
-// 计算属性
+// Computed properties
 const filteredPrompts = computed(() => {
   let result = categoryPrompts.value || []
 
   if (searchQuery.value) {
-    // 简单的文本搜索
+    // Simple text search
     const query = searchQuery.value.toLowerCase()
     result = result.filter(prompt => 
       prompt.title?.toLowerCase().includes(query) ||
@@ -289,7 +289,7 @@ const filteredPrompts = computed(() => {
     )
   }
 
-  // 排序逻辑
+  // Sorting logic
   switch (sortBy.value) {
     case 'popular':
       result.sort((a, b) => (b.likes || 0) - (a.likes || 0))
@@ -301,7 +301,7 @@ const filteredPrompts = computed(() => {
       result.sort((a, b) => (a.title || '').localeCompare(b.title || ''))
       break
     default:
-      // 使用slug作为默认排序
+      // Use slug as default sorting
       result.sort((a, b) => (a.slug || '').localeCompare(b.slug || ''))
   }
 
@@ -316,7 +316,7 @@ const paginatedPrompts = computed(() => {
   return filteredPrompts.value.slice(start, end)
 })
 
-// 方法
+// Methods
 const handleSearch = (query) => {
   searchQuery.value = query
   currentPage.value = 1
@@ -326,11 +326,11 @@ const handleSort = () => {
   currentPage.value = 1
 }
 
-// 404处理 - 只在客户端执行
+// 404 handling - only execute on client side
 if (process.client && !categoryMap[category]) {
   throw createError({
     statusCode: 404,
-    statusMessage: '分类不存在'
+    statusMessage: 'Category does not exist'
   })
 }
 </script>

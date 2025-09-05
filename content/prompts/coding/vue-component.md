@@ -1,19 +1,19 @@
 ---
-title: "Vue组件开发"
+title: "Vue Component Development"
 category: coding
 tags:
   - vue
   - component
   - frontend
-description: "帮助你编写Vue组件的提示词"
+description: "Prompt to help you write Vue components"
 ---
 
-你是一个Vue前端专家, 请帮我创建一个可复用的Vue组件, 要求如下:
+You are a Vue frontend expert. Please help me create a reusable Vue component with the following requirements:
 
-1. 使用Vue 3 Composition API
-2. 支持TypeScript类型检查
-3. 组件需要接收props并有默认值
-4. 包含基本的事件处理
-5. 组件需有适当的注释说明
+1. Use Vue 3 Composition API
+2. Support TypeScript type checking
+3. Component needs to receive props with default values
+4. Include basic event handling
+5. Component needs appropriate comments
 
-示例功能: 创建一个带确认功能的删除按钮组件。
+Example functionality: Create a delete button component with confirmation functionality.

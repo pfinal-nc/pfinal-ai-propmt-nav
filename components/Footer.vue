@@ -2,20 +2,20 @@
   <footer class="bg-gradient-to-br from-gray-900 to-gray-800 text-white mt-20">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
-        <!-- 网站信息 -->
+        <!-- Website Information -->
         <div class="lg:col-span-2">
           <div class="flex items-center space-x-3 mb-6">
             <div class="w-12 h-12 bg-gradient-to-br from-indigo-500 via-purple-500 to-pink-500 rounded-xl flex items-center justify-center shadow-lg">
               <span class="text-white font-bold text-lg">AI</span>
             </div>
             <div>
-              <h3 class="text-2xl font-bold">AI提示词导航</h3>
+              <h3 class="text-2xl font-bold">AI Prompts Navigation</h3>
               <p class="text-indigo-300 text-sm">AI Prompts Collection</p>
             </div>
           </div>
           <p class="text-gray-300 mb-8 leading-relaxed max-w-md">
-            收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。
-            涵盖写作、编程、营销、学习等各个领域。
+            Discover the most comprehensive collection of AI prompts to help you better utilize ChatGPT, Claude, Gemini and other AI tools.
+            Covering writing, programming, marketing, learning and various other fields.
           </p>
           <div class="flex space-x-4">
             <a href="#" class="w-10 h-10 bg-gray-700 hover:bg-indigo-600 rounded-lg flex items-center justify-center transition-colors duration-200 group">
@@ -33,46 +33,46 @@
           </div>
         </div>
         
-        <!-- 快速链接 -->
+        <!-- Quick Links -->
         <div>
-          <h4 class="text-lg font-semibold mb-6 text-white">快速导航</h4>
+          <h4 class="text-lg font-semibold mb-6 text-white">Quick Navigation</h4>
           <ul class="space-y-3">
             <li>
               <NuxtLink to="/" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">
                 <span class="w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                <span>首页</span>
+                <span>Home</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/prompts/writing" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">
                 <span class="w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                <span>写作提示词</span>
+                <span>Writing Prompts</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/prompts/coding" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">
                 <span class="w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                <span>编程提示词</span>
+                <span>Coding Prompts</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/prompts/marketing" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">
                 <span class="w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                <span>营销提示词</span>
+                <span>Marketing Prompts</span>
               </NuxtLink>
             </li>
             <li>
               <NuxtLink to="/prompts/learning" class="text-gray-300 hover:text-white transition-colors duration-200 flex items-center space-x-2 group">
                 <span class="w-1 h-1 bg-indigo-500 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-200"></span>
-                <span>学习提示词</span>
+                <span>Learning Prompts</span>
               </NuxtLink>
             </li>
           </ul>
         </div>
         
-        <!-- AI工具 -->
+        <!-- AI Tools -->
         <div>
-          <h4 class="text-lg font-semibold mb-6 text-white">支持的AI工具</h4>
+          <h4 class="text-lg font-semibold mb-6 text-white">Supported AI Tools</h4>
           <ul class="space-y-3">
             <li class="flex items-center space-x-2 text-gray-300">
               <div class="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -88,19 +88,19 @@
             </li>
             <li class="flex items-center space-x-2 text-gray-300">
               <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-              <span>文心一言</span>
+              <span>ERNIE Bot</span>
             </li>
             <li class="flex items-center space-x-2 text-gray-300">
               <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-              <span>通义千问</span>
+              <span>Tongyi Qianwen</span>
             </li>
           </ul>
         </div>
       </div>
       
-      <!-- 版权信息 -->
+      <!-- Copyright Information -->
       <div class="border-t border-gray-700 mt-12 pt-8 text-center">
-        <p class="text-gray-400">&copy; 2024 AI提示词导航. PFinalClub 保留所有权利.</p>
+        <p class="text-gray-400">&copy; 2024 AI Prompts Navigation. PFinalClub All rights reserved.</p>
         <p class="text-gray-500 text-sm mt-2">Made with ❤️ for AI enthusiasts</p>
       </div>
     </div>

@@ -1,23 +1,23 @@
 ---
-title: "日常健康建议"
+title: "Daily Health Tips"
 category: "life"
 tags:
    - health
    - wellness
    - lifestyle
-description: "改善日常生活健康的提示词"
+description: "Prompt for improving daily life health"
 ---
 
-你是一位健康管理专家,请为办公室工作者提供一份日常健康指南,包括:
+You are a health management expert. Please provide a daily health guide for office workers, including:
 
-1. 久坐人群的健康风险分析
-2. 工作期间的运动建议:
-   - 每小时的小运动
-   - 午休时间的活动
-   - 下班后的锻炼计划
-3. 饮食建议:
-   - 早餐搭配
-   - 午餐选择
-   - 下午茶推荐
-4. 心理健康维护方法
-5. 睡眠质量改善技巧
+1. Health risk analysis for sedentary people
+2. Exercise suggestions during work:
+   - Small exercises every hour
+   - Activities during lunch break
+   - Post-work exercise plan
+3. Dietary suggestions:
+   - Breakfast combinations
+   - Lunch choices
+   - Afternoon tea recommendations
+4. Mental health maintenance methods
+5. Sleep quality improvement techniques

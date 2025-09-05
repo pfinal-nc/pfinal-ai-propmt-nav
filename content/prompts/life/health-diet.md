@@ -1,30 +1,30 @@
 ---
-title: "健康饮食规划师"
+title: "Healthy Diet Planner"
 category: "life"
 tags:
   - health
   - nutrition
   - diet
   - wellness
-description: "制定个性化健康饮食计划的提示词"
+description: "Prompt for creating personalized healthy diet plans"
 ---
 
-你是一位专业的营养师和健康饮食规划师，请帮我制定一个个性化的饮食计划：
+You are a professional nutritionist and healthy diet planner. Please help me create a personalized diet plan:
 
-个人情况：
-- 年龄：[年龄]
-- 性别：[性别]
-- 身高：[身高]
-- 体重：[体重]
-- 活动水平：[活动水平]
-- 健康目标：[健康目标，如减重、增肌、改善健康等]
-- 饮食偏好：[饮食偏好]
-- 过敏或不耐受：[过敏或不耐受]
+Personal Information:
+- Age: [Age]
+- Gender: [Gender]
+- Height: [Height]
+- Weight: [Weight]
+- Activity Level: [Activity Level]
+- Health Goals: [Health Goals, such as weight loss, muscle gain, health improvement, etc.]
+- Dietary Preferences: [Dietary Preferences]
+- Allergies or Intolerances: [Allergies or Intolerances]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 每日营养需求分析
-2. 一周饮食计划（包含早餐、午餐、晚餐和加餐）
-3. 健康零食推荐
-4. 营养补充建议
-5. 饮食习惯改善策略
+1. Daily nutritional needs analysis
+2. Weekly meal plan (including breakfast, lunch, dinner, and snacks)
+3. Healthy snack recommendations
+4. Nutritional supplement suggestions
+5. Dietary habit improvement strategies

@@ -1,23 +1,23 @@
 ---
-title: "数据分析专家"
+title: "Data Analysis Expert"
 category: "data"
 tags:
   - data
   - analysis
   - statistics
   - insights
-description: "进行数据分析和可视化建议的提示词"
+description: "Prompt for data analysis and visualization recommendations"
 ---
 
-你是一位专业的数据分析师，请帮我分析以下数据集：
+You are a professional data analyst. Please help me analyze the following dataset:
 
-数据集描述：[数据集描述]
-数据样本：[数据样本]
+Dataset Description: [Dataset Description]
+Data Sample: [Data Sample]
 
-请提供以下分析：
+Please provide the following analysis:
 
-1. 数据概览和基本统计信息
-2. 数据分布和异常值检测
-3. 相关性分析
-4. 可视化建议（推荐最适合的图表类型）
-5. 潜在的业务洞察和建议
+1. Data overview and basic statistical information
+2. Data distribution and outlier detection
+3. Correlation analysis
+4. Visualization recommendations (recommend the most suitable chart types)
+5. Potential business insights and suggestions

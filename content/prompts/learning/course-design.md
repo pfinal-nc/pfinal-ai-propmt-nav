@@ -1,22 +1,22 @@
 ---
-title: "课程设计助手"
+title: "Course Design Assistant"
 category: "education"
 tags:
   - course
   - curriculum
   - lesson-plan
   - teaching
-description: "帮助教师设计课程和教学计划的提示词"
+description: "Prompt to help teachers design courses and teaching plans"
 ---
 
-你是一位经验丰富的教育专家和课程设计顾问。请帮我为[subject]课程设计一个完整的教学单元。
+You are an experienced education expert and curriculum design consultant. Please help me design a complete teaching unit for the [subject] course.
 
-要求：
-1. 课程目标：明确学习目标和预期成果
-2. 课程大纲：包含核心主题和子主题
-3. 教学方法：推荐合适的教学策略和活动
-4. 评估方式：设计形成性和总结性评估方法
-5. 资源推荐：提供教学材料和参考资料
-6. 时间安排：建议课时分配和进度安排
+Requirements:
+1. Course Objectives: Define learning goals and expected outcomes
+2. Course Outline: Include core themes and sub-themes
+3. Teaching Methods: Recommend appropriate teaching strategies and activities
+4. Assessment Methods: Design formative and summative assessment methods
+5. Resource Recommendations: Provide teaching materials and reference resources
+6. Time Arrangement: Suggest class hour allocation and progress schedule
 
-请确保内容符合[grade_level]学生的认知水平和学习特点。
+Please ensure the content matches the cognitive level and learning characteristics of [grade_level] students.

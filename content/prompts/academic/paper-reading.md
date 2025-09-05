@@ -1,24 +1,24 @@
 ---
-title: "学术论文阅读助手"
+title: "Academic Paper Reading Assistant"
 category: "academic"
 tags:
   - academic
   - research
   - paper
   - reading
-description: "帮助理解和分析学术论文的提示词"
+description: "Prompt for understanding and analyzing academic papers"
 ---
 
-你是一位专业的学术研究导师，请帮我分析这篇学术论文：
+You are a professional academic research mentor. Please help me analyze this academic paper:
 
-论文标题：[论文标题]
-研究领域：[研究领域]
-论文摘要：[论文摘要]
+Paper Title: [Paper Title]
+Research Field: [Research Field]
+Paper Abstract: [Paper Abstract]
 
-请提供以下分析：
+Please provide the following analysis:
 
-1. 研究背景和问题陈述
-2. 研究方法和技术路线
-3. 主要发现和贡献
-4. 研究局限性和未来工作
-5. 对该领域的影响和意义
+1. Research background and problem statement
+2. Research methods and technical approach
+3. Main findings and contributions
+4. Research limitations and future work
+5. Impact and significance to the field

@@ -2,61 +2,61 @@
 
   
   <div class="space-y-16 lg:space-y-24">
-    <!-- 英雄区域 -->
+    <!-- Hero Section -->
     <section class="text-center py-12 lg:py-20">
       <div class="max-w-4xl mx-auto">
         <div class="mb-8">
           <h1 class="text-4xl lg:text-6xl font-bold text-gray-900 mb-6 leading-tight">
-            AI提示词
+            AI Prompts
             <span class="bg-gradient-to-r from-indigo-600 via-purple-600 to-pink-600 bg-clip-text text-transparent">
-              导航站
+              Navigation
             </span>
           </h1>
           <p class="text-lg lg:text-xl text-gray-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-            收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。
-            涵盖写作、编程、营销、学习等各个领域。
+            Discover the most comprehensive collection of AI prompts to help you better utilize ChatGPT, Claude, Gemini and other AI tools.
+            Covering writing, programming, marketing, learning and various other fields.
           </p>
         </div>
         
-        <!-- 搜索框 -->
+        <!-- Search Box -->
         <div class="max-w-3xl mx-auto mb-8">
           <div class="bg-white/60 backdrop-blur-sm border border-gray-200/60 rounded-2xl p-8 shadow-soft">
             <SearchBar @search="handleSearch" />
           </div>
         </div>
         
-        <!-- 统计信息 -->
+        <!-- Statistics -->
         <div class="flex justify-center items-center space-x-8 text-sm text-gray-500">
           <div class="flex items-center space-x-2">
             <svg class="w-5 h-5 text-indigo-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span>1000+ 精选提示词</span>
+            <span>1000+ Curated Prompts</span>
           </div>
           <div class="flex items-center space-x-2">
             <svg class="w-5 h-5 text-purple-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span>5+ 主要分类</span>
+            <span>5+ Main Categories</span>
           </div>
           <div class="flex items-center space-x-2">
             <svg class="w-5 h-5 text-pink-500" fill="currentColor" viewBox="0 0 20 20">
               <path d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"></path>
             </svg>
-            <span>持续更新</span>
+            <span>Regular Updates</span>
           </div>
         </div>
       </div>
     </section>
     
-    <!-- 分类导航 -->
+    <!-- Category Navigation -->
     <section class="py-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          探索分类
+          Explore Categories
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          按领域分类浏览，快速找到你需要的AI提示词
+          Browse by field categories to quickly find the AI prompts you need
         </p>
       </div>
       
@@ -73,20 +73,20 @@
           <h3 class="font-semibold text-gray-900 text-lg mb-2 group-hover:text-indigo-600 transition-colors">
             {{ category.name }}
           </h3>
-          <p class="text-sm text-gray-500 mb-3">{{ category.count }} 个提示词</p>
+          <p class="text-sm text-gray-500 mb-3">{{ category.count }} prompts</p>
           <div class="w-8 h-1 bg-gradient-to-r from-indigo-500 to-purple-500 mx-auto rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"></div>
         </NuxtLink>
       </div>
     </section>
     
-    <!-- 精选提示词 -->
+    <!-- Featured Prompts -->
     <section v-if="prompts && prompts.length > 0" class="py-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          精选提示词
+          Featured Prompts
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          最受欢迎和实用的AI提示词推荐
+          Most popular and practical AI prompt recommendations
         </p>
       </div>
       
@@ -98,13 +98,13 @@
         />
       </div>
       
-      <!-- 查看更多按钮 -->
+      <!-- View More Button -->
       <div class="text-center mt-12 text-white">
         <NuxtLink 
           to="/prompts"
           class="inline-flex items-center space-x-2 px-8 py-4 bg-gradient-to-r from-blue-600 to-purple-600 text-white font-semibold rounded-xl hover:from-blue-700 hover:to-purple-700 transform hover:scale-105 transition-all duration-300 shadow-lg hover:shadow-xl"
         >
-          <span class="text-white">查看更多提示词</span>
+          <span class="text-white">View More Prompts</span>
           <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
           </svg>
@@ -112,14 +112,14 @@
       </div>
     </section>
     
-    <!-- 特色功能 -->
+    <!-- Features -->
     <section class="py-8">
       <div class="text-center mb-12">
         <h2 class="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-          为什么选择我们
+          Why Choose Us
         </h2>
         <p class="text-lg text-gray-600 max-w-2xl mx-auto">
-          专业的AI提示词收集平台，助力你的AI使用体验
+          Professional AI prompt collection platform to enhance your AI experience
         </p>
       </div>
       
@@ -130,8 +130,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19.428 15.428a2 2 0 00-1.022-.547l-2.387-.477a6 6 0 00-3.86.517l-.318.158a6 6 0 01-3.86.517L6.05 15.21a2 2 0 00-1.806.547M8 4h8l-1 1v5.172a2 2 0 00.586 1.414l5 5c1.26 1.26.367 3.414-1.415 3.414H4.828c-1.782 0-2.674-2.154-1.414-3.414l5-5A2 2 0 009 10.172V5L8 4z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">精选内容</h3>
-          <p class="text-gray-600">经过精心筛选和测试的高质量提示词，确保实用性和有效性</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Curated Content</h3>
+          <p class="text-gray-600">Carefully selected and tested high-quality prompts to ensure practicality and effectiveness</p>
         </div>
         
         <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow duration-300">
@@ -140,8 +140,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 6V4m0 2a2 2 0 100 4m0-4a2 2 0 110 4m-6 8a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4m6 6v10m6-2a2 2 0 100-4m0 4a2 2 0 100 4m0-4v2m0-6V4"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">分类清晰</h3>
-          <p class="text-gray-600">按领域和用途分类，快速找到适合你需求的提示词</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Clear Categories</h3>
+          <p class="text-gray-600">Organized by field and purpose to quickly find prompts that suit your needs</p>
         </div>
         
         <div class="bg-white rounded-2xl p-8 shadow-sm border border-gray-200 text-center hover:shadow-lg transition-shadow duration-300">
@@ -150,8 +150,8 @@
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
             </svg>
           </div>
-          <h3 class="text-xl font-semibold text-gray-900 mb-4">持续更新</h3>
-          <p class="text-gray-600">定期更新最新最热门的AI提示词，跟上AI技术发展</p>
+          <h3 class="text-xl font-semibold text-gray-900 mb-4">Regular Updates</h3>
+          <p class="text-gray-600">Regularly updated with the latest and most popular AI prompts to keep up with AI technology development</p>
         </div>
       </div>
     </section>
@@ -162,18 +162,19 @@
 import { usePrompts, useCategories } from '~/utils/usePrompts'
 import { getCategoryIcon } from '~/utils/categories'
 
-// 页面元数据
+// Page metadata
 useHead({
-  title: 'AI提示词导航站 - 最全的AI Prompts集合 | ChatGPT、Claude、Gemini提示词',
+  title: 'AI Prompts Navigation - Complete AI Prompts Collection | ChatGPT, Claude, Gemini Prompts',
   meta: [
-    { name: 'description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。涵盖写作、编程、营销、学习等各个领域，提升工作效率。' },
-    { name: 'keywords', content: 'AI提示词,ChatGPT提示词,Claude提示词,Gemini提示词,AI工具,提示词模板,写作助手,编程助手,营销工具,学习助手' },
-    { property: 'og:title', content: 'AI提示词导航站 - 最全的AI Prompts集合' },
-    { property: 'og:description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。涵盖写作、编程、营销、学习等各个领域。' },
+    { name: 'description', content: 'Discover the most comprehensive collection of AI prompts to help you better utilize ChatGPT, Claude, Gemini and other AI tools. Covering writing, programming, marketing, learning and various fields to improve work efficiency.' },
+    { name: 'keywords', content: 'AI prompts,ChatGPT prompts,Claude prompts,Gemini prompts,AI tools,prompt templates,writing assistant,programming assistant,marketing tools,learning assistant,prompts,pfinalclub' },
+    { property: 'og:title', content: 'AI Prompts Navigation - Complete AI Prompts Collection' },
+    { property: 'og:description', content: 'Discover the most comprehensive collection of AI prompts to help you better utilize ChatGPT, Claude, Gemini and other AI tools. Covering writing, programming, marketing, learning and various fields.' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: 'AI提示词导航站 - 最全的AI Prompts集合' },
-    { name: 'twitter:description', content: '收集最全面的AI提示词，帮助你更好地使用ChatGPT、Claude、Gemini等AI工具。' }
+    { name: 'twitter:title', content: 'AI Prompts Navigation - Complete AI Prompts Collection' },
+    { name: 'twitter:description', content: 'Discover the most comprehensive collection of AI prompts to help you better utilize ChatGPT, Claude, Gemini and other AI tools.' },
+    { name: 'twitter:image', content: 'https://pnav.friday-go.icu/logo.png' }
   ],
   link: [
     { rel: 'canonical', href: 'https://pnav.friday-go.icu' }
@@ -184,8 +185,8 @@ useHead({
       children: JSON.stringify({
         '@context': 'https://schema.org',
         '@type': 'WebSite',
-        name: 'AI提示词导航站',
-        description: '收集最全面的AI提示词，包括ChatGPT、Claude、Gemini等AI工具的写作、编程、营销、学习提示词',
+        name: 'AI Prompts Navigation',
+        description: 'Discover the most comprehensive collection of AI prompts, including writing, programming, marketing, and learning prompts for ChatGPT, Claude, Gemini and other AI tools',
         url: 'https://pnav.friday-go.icu',
         potentialAction: {
           '@type': 'SearchAction',
@@ -197,13 +198,13 @@ useHead({
   ]
 })
 
-// 获取提示词和分类数据
+// Get prompts and category data
 const prompts = await usePrompts()
 const categories = await useCategories()
 
-// 搜索处理
+// Search handling
 const handleSearch = (query) => {
-  // 实际项目中这里应该导航到搜索结果页面
-  console.log('搜索:', query)
+  // In actual projects, this should navigate to search results page
+  console.log('Search:', query)
 }
 </script>

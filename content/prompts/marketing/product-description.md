@@ -1,11 +1,11 @@
 ---
-title: "生成产品描述"
+title: "Generate Product Description"
 category: "marketing"
 tags:
     - product
     - description
     - ecommerce
-description: "为电商产品生成吸引人的描述"
+description: "Generate attractive descriptions for e-commerce products"
 ---
 
-请为以下产品生成一段吸引人的描述:{product_name},主要特点:{features},目标用户:{target_audience}.
+Please generate an attractive description for the following product: {product_name}, main features: {features}, target audience: {target_audience}.

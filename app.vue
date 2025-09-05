@@ -5,10 +5,10 @@
 </template>
 
 <script setup>
-// 全局样式和配置
+// Global styles and configuration
 useHead({
   htmlAttrs: {
-    lang: 'zh-CN'
+    lang: 'en'
   },
   link: [
     { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
@@ -17,7 +17,7 @@ useHead({
 </script>
 
 <style>
-/* 全局样式重置和基础样式 */
+/* Global style reset and base styles */
 * {
   box-sizing: border-box;
 }
@@ -26,7 +26,7 @@ html {
   scroll-behavior: smooth;
 }
 
-/* 自定义滚动条 */
+/* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;
 }
@@ -44,13 +44,13 @@ html {
   background: #94a3b8;
 }
 
-/* 选中文本样式 */
+/* Selected text styles */
 ::selection {
   background-color: #3b82f6;
   color: white;
 }
 
-/* 动画 */
+/* Animations */
 .fade-enter-active,
 .fade-leave-active {
   transition: opacity 0.3s ease;
@@ -61,7 +61,7 @@ html {
   opacity: 0;
 }
 
-/* 工具类 */
+/* Utility classes */
 .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -80,7 +80,7 @@ html {
   }
 }
 
-/* 文本截断 */
+/* Text truncation */
 .line-clamp-1 {
   display: -webkit-box;
   -webkit-line-clamp: 1;
@@ -102,7 +102,7 @@ html {
   overflow: hidden;
 }
 
-/* 加载动画 */
+/* Loading animation */
 .loading-spinner {
   display: inline-block;
   width: 20px;
@@ -119,7 +119,7 @@ html {
   }
 }
 
-/* 卡片悬停效果 */
+/* Card hover effects */
 .card-hover {
   transition: all 0.2s ease-in-out;
 }
@@ -129,7 +129,7 @@ html {
   box-shadow: 0 10px 25px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
 }
 
-/* 按钮动画 */
+/* Button animations */
 .btn-primary {
   background-color: #3b82f6;
   color: white;
@@ -147,7 +147,7 @@ html {
   transform: translateY(0);
 }
 
-/* 响应式隐藏 */
+/* Responsive hiding */
 @media (max-width: 767px) {
   .hidden-mobile {
     display: none !important;

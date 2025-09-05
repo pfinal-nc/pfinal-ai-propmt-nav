@@ -2,11 +2,11 @@ import { useAsyncData } from '#imports'
 import { getCategoryName } from '~/utils/categories'
 import { parseMd } from '~/utils/parseMd'
 
-// 导入所有提示词数据
+// Import all prompt data
 const promptsContext = import.meta.glob('~/content/prompts/**/*.md', { eager: true, query: '?raw', import: 'default' })
 
 /**
- * 获取所有提示词
+ * Get all prompts
  */
 export const usePrompts = async () => {
   const { data } = await useAsyncData('prompts', () => {
@@ -26,7 +26,7 @@ export const usePrompts = async () => {
 }
 
 /**
- * 根据分类获取提示词
+ * Get prompts by category
  */
 export const usePromptsByCategory = async (category) => {
   const { data } = await useAsyncData(`prompts-${category}`, () => {
@@ -47,7 +47,7 @@ export const usePromptsByCategory = async (category) => {
 }
 
 /**
- * 获取提示词详情
+ * Get prompt details
  */
 export const usePromptBySlug = async (category, slug) => {
   const { data } = await useAsyncData(`prompt-${category}-${slug}`, () => {
@@ -70,7 +70,7 @@ export const usePromptBySlug = async (category, slug) => {
 }
 
 /**
- * 获取所有分类
+ * Get all categories
  */
 export const useCategories = async () => {
   const { data } = await useAsyncData('categories', () => {

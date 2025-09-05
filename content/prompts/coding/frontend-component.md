@@ -1,5 +1,5 @@
 ---
-title: "前端组件开发"
+title: "Frontend Component Development"
 category: "coding"
 tags:
   - frontend
@@ -7,22 +7,22 @@ tags:
   - ui
   - react
   - vue
-description: "生成可复用前端UI组件的提示词"
+description: "Prompt for generating reusable frontend UI components"
 ---
 
-你是一位专业的前端开发工程师，请帮我创建一个[组件名称]组件：
+You are a professional frontend developer. Please help me create a [Component Name] component:
 
-组件需求：
-- 功能描述：[功能描述]
-- 使用技术：[使用技术，如React、Vue等]
-- 设计规范：[设计规范，如Material Design、Bootstrap等]
-- 交互要求：[交互要求]
-- 响应式要求：[响应式要求]
+Component Requirements:
+- Function Description: [Function Description]
+- Technology Used: [Technology Used, such as React, Vue, etc.]
+- Design Standards: [Design Standards, such as Material Design, Bootstrap, etc.]
+- Interaction Requirements: [Interaction Requirements]
+- Responsive Requirements: [Responsive Requirements]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 完整的组件代码
-2. PropTypes或TypeScript类型定义
-3. 使用示例和文档
-4. 可访问性（a11y）考虑
-5. 性能优化建议
+1. Complete component code
+2. PropTypes or TypeScript type definitions
+3. Usage examples and documentation
+4. Accessibility (a11y) considerations
+5. Performance optimization suggestions

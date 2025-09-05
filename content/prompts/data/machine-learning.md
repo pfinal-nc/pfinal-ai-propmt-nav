@@ -1,26 +1,26 @@
 ---
-title: "机器学习模型选择"
+title: "Machine Learning Model Selection"
 category: "data"
 tags:
   - machine-learning
   - ai
   - model
   - algorithms
-description: "选择和实现机器学习模型的提示词"
+description: "Prompt for selecting and implementing machine learning models"
 ---
 
-你是一位专业的机器学习工程师，请帮我为以下问题选择和实现合适的机器学习模型：
+You are a professional machine learning engineer. Please help me select and implement suitable machine learning models for the following problem:
 
-问题描述：[问题描述]
-数据类型：[数据类型]
-预期输出：[预期输出]
-性能要求：[性能要求]
-计算资源：[计算资源]
+Problem Description: [Problem Description]
+Data Type: [Data Type]
+Expected Output: [Expected Output]
+Performance Requirements: [Performance Requirements]
+Computing Resources: [Computing Resources]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 适合的机器学习算法推荐
-2. 数据预处理建议
-3. 模型训练和验证策略
-4. 超参数调优方案
-5. 模型部署考虑
+1. Suitable machine learning algorithm recommendations
+2. Data preprocessing suggestions
+3. Model training and validation strategies
+4. Hyperparameter tuning solutions
+5. Model deployment considerations

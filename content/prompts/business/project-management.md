@@ -1,26 +1,26 @@
 ---
-title: "项目管理助手"
+title: "Project Management Assistant"
 category: "business"
 tags:
   - project
   - management
   - planning
   - timeline
-description: "制定项目计划和管理任务的提示词"
+description: "Prompt for creating project plans and managing tasks"
 ---
 
-你是一位专业的项目经理，请帮我制定一个详细的项目计划：
+You are a professional project manager. Please help me create a detailed project plan:
 
-项目名称：[项目名称]
-项目目标：[项目目标]
-关键里程碑：[关键里程碑]
-可用资源：[可用资源]
-限制条件：[限制条件]
+Project Name: [Project Name]
+Project Objectives: [Project Objectives]
+Key Milestones: [Key Milestones]
+Available Resources: [Available Resources]
+Constraints: [Constraints]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 详细的项目时间线（甘特图格式）
-2. 任务分解结构（WBS）
-3. 风险评估和缓解策略
-4. 资源分配计划
-5. 沟通计划和关键决策点
+1. Detailed project timeline (Gantt chart format)
+2. Work Breakdown Structure (WBS)
+3. Risk assessment and mitigation strategies
+4. Resource allocation plan
+5. Communication plan and key decision points

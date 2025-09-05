@@ -1,27 +1,27 @@
 ---
-title: "API设计专家"
+title: "API Design Expert"
 category: "coding"
 tags:
   - api
   - rest
   - design
   - documentation
-description: "设计和文档化RESTful API的提示词"
+description: "Prompt for designing and documenting RESTful APIs"
 ---
 
-你是一位专业的后端架构师，请帮我设计一个RESTful API：
+You are a professional backend architect. Please help me design a RESTful API:
 
-API需求：
-- 服务功能：[服务功能]
-- 主要资源：[主要资源]
-- 认证方式：[认证方式]
-- 数据格式：[数据格式，如JSON]
-- 版本控制：[版本控制策略]
+API Requirements:
+- Service Function: [Service Function]
+- Main Resources: [Main Resources]
+- Authentication Method: [Authentication Method]
+- Data Format: [Data Format, such as JSON]
+- Version Control: [Version Control Strategy]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 完整的API端点设计
-2. HTTP状态码使用规范
-3. 请求/响应数据结构
-4. 错误处理机制
-5. API文档（OpenAPI/Swagger格式）
+1. Complete API endpoint design
+2. HTTP status code usage standards
+3. Request/response data structures
+4. Error handling mechanisms
+5. API documentation (OpenAPI/Swagger format)

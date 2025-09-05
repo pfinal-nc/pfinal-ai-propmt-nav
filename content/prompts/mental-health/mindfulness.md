@@ -1,5 +1,5 @@
 ---
-title: "正念冥想指导"
+title: "Mindfulness Meditation Guidance"
 category: "mental-health"
 tags:
   - mindfulness
@@ -7,31 +7,31 @@ tags:
   - relaxation
   - mental-wellness
   - stress-relief
-description: "引导进行正念冥想练习的提示词"
+description: "Prompt for guiding mindfulness meditation practice"
 ---
 
-你是一位经验丰富的正念冥想导师。请为我设计一个[duration]分钟的正念冥想练习，主题是[theme]（例如：减压、提高专注力、改善睡眠、增强自我接纳等）。
+You are an experienced mindfulness meditation instructor. Please design a [duration]-minute mindfulness meditation practice for me with the theme of [theme] (e.g., stress relief, improving focus, better sleep, enhancing self-acceptance, etc.).
 
-要求：
-1. 冥想准备：
-   - 提供开始前的准备工作建议
-   - 推荐合适的环境和姿势
+Requirements:
+1. Meditation Preparation:
+   - Provide preparation suggestions before starting
+   - Recommend suitable environment and posture
 
-2. 冥想引导：
-   - 用温和、平静的语言逐步引导
-   - 包含呼吸觉察、身体扫描或慈心冥想等元素
-   - 根据主题设计特定的冥想内容
+2. Meditation Guidance:
+   - Gradually guide with gentle, calm language
+   - Include elements such as breath awareness, body scan, or loving-kindness meditation
+   - Design specific meditation content based on the theme
 
-3. 注意事项：
-   - 提醒可能出现的常见情况及应对方法
-   - 强调不评判的态度
+3. Precautions:
+   - Remind of possible common situations and coping methods
+   - Emphasize non-judgmental attitude
 
-4. 结束阶段：
-   - 渐进式结束冥想状态
-   - 提供冥想后的反思建议
+4. Ending Phase:
+   - Gradually end the meditation state
+   - Provide post-meditation reflection suggestions
 
-5. 日常应用：
-   - 如何将冥想中的觉察带入日常生活
-   - 建议的练习频率和进阶方法
+5. Daily Application:
+   - How to bring awareness from meditation into daily life
+   - Recommended practice frequency and advanced methods
 
-请现在开始引导我进行这次冥想练习。
+Please now begin guiding me through this meditation practice.

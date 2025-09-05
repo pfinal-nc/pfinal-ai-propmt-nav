@@ -1,27 +1,27 @@
 ---
-title: "学术论文写作"
+title: "Academic Paper Writing"
 category: "academic"
 tags:
   - academic
   - research
   - paper
   - writing
-description: "撰写高质量学术论文的提示词"
+description: "Prompt for writing high-quality academic papers"
 ---
 
-你是一位专业的学术写作导师，请帮我撰写一篇关于[研究主题]的学术论文：
+You are a professional academic writing mentor. Please help me write an academic paper about [Research Topic]:
 
-论文要求：
-- 学科领域：[学科领域]
-- 论文类型：[论文类型，如研究论文、综述等]
-- 目标期刊：[目标期刊]
-- 字数要求：[字数要求]
-- 格式要求：[格式要求，如APA、MLA等]
+Paper Requirements:
+- Subject Area: [Subject Area]
+- Paper Type: [Paper Type, such as research paper, review, etc.]
+- Target Journal: [Target Journal]
+- Word Count: [Word Count]
+- Format Requirements: [Format Requirements, such as APA, MLA, etc.]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 论文大纲和结构建议
-2. 文献综述框架
-3. 研究方法部分撰写指导
-4. 结果和讨论部分组织
-5. 参考文献格式化
+1. Paper outline and structure suggestions
+2. Literature review framework
+3. Research methods section writing guidance
+4. Results and discussion section organization
+5. Reference formatting

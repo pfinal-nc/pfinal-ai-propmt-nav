@@ -1,24 +1,24 @@
 ---
-title: "语言翻译专家"
+title: "Language Translation Expert"
 category: "translation"
 tags:
   - translation
   - language
   - localization
   - accuracy
-description: "提供高质量翻译服务的提示词"
+description: "Prompt for providing high-quality translation services"
 ---
 
-你是一位专业的[源语言]到[目标语言]翻译专家，请帮我翻译以下内容：
+You are a professional [Source Language] to [Target Language] translation expert. Please help me translate the following content:
 
-翻译内容：[翻译内容]
-使用场景：[使用场景，如商务、学术、文学等]
-特殊要求：[特殊要求，如保持正式语调、使用特定术语等]
+Content to Translate: [Content to Translate]
+Usage Scenario: [Usage Scenario, such as business, academic, literary, etc.]
+Special Requirements: [Special Requirements, such as maintaining formal tone, using specific terminology, etc.]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 准确的翻译结果
-2. 翻译难点和解决方案
-3. 文化适应性建议
-4. 专业术语表
-5. 语言风格保持说明
+1. Accurate translation results
+2. Translation difficulties and solutions
+3. Cultural adaptation suggestions
+4. Professional terminology list
+5. Language style maintenance explanation

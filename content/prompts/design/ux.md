@@ -1,27 +1,27 @@
 ---
-title: "用户体验优化"
+title: "User Experience Optimization"
 category: "design"
 tags:
   - ux
   - ui
   - design
   - usability
-description: "优化产品用户体验和界面设计的提示词"
+description: "Prompt for optimizing product user experience and interface design"
 ---
 
-你是一位专业的用户体验设计师，请帮我优化[产品名称]的用户体验：
+You are a professional user experience designer. Please help me optimize the user experience of [Product Name]:
 
-产品信息：
-- 产品类型：[产品类型]
-- 目标用户：[目标用户]
-- 当前问题：[当前问题]
-- 业务目标：[业务目标]
-- 技术限制：[技术限制]
+Product Information:
+- Product Type: [Product Type]
+- Target Users: [Target Users]
+- Current Issues: [Current Issues]
+- Business Objectives: [Business Objectives]
+- Technical Constraints: [Technical Constraints]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 用户旅程地图
-2. 痛点分析和改进建议
-3. 界面布局和交互设计
-4. 可用性测试计划
-5. 设计系统和组件规范
+1. User journey map
+2. Pain point analysis and improvement suggestions
+3. Interface layout and interaction design
+4. Usability testing plan
+5. Design system and component specifications

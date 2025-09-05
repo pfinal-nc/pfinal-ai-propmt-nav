@@ -1,24 +1,24 @@
 ---
-title: "SEO内容优化"
+title: "SEO Content Optimization"
 category: "marketing"
 tags:
   - seo
   - content
   - optimization
   - keywords
-description: "优化内容以提高搜索引擎排名的提示词"
+description: "Prompt for optimizing content to improve search engine rankings"
 ---
 
-你是一位专业的SEO专家，请帮我优化以下内容以提高搜索引擎排名：
+You are a professional SEO expert. Please help me optimize the following content to improve search engine rankings:
 
-目标关键词：[目标关键词]
-内容主题：[内容主题]
-现有内容：[现有内容]
+Target Keywords: [Target Keywords]
+Content Theme: [Content Theme]
+Existing Content: [Existing Content]
 
-请提供以下优化建议：
+Please provide the following optimization suggestions:
 
-1. 关键词研究和长尾关键词建议
-2. 标题和元描述优化
-3. 内容结构优化（H1, H2, H3标签使用）
-4. 内链和外链策略
-5. 页面加载速度和移动端优化建议
+1. Keyword research and long-tail keyword suggestions
+2. Title and meta description optimization
+3. Content structure optimization (H1, H2, H3 tag usage)
+4. Internal and external linking strategies
+5. Page loading speed and mobile optimization suggestions

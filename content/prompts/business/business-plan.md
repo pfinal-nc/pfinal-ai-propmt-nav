@@ -1,70 +1,70 @@
 ---
-title: "创业计划书撰写"
+title: "Business Plan Writing"
 category: "business-plan"
 tags:
   - startup
   - business-plan
   - entrepreneurship
   - funding
-description: "帮助撰写完整创业计划书的提示词"
+description: "Prompt for writing comprehensive business plans"
 ---
 
-你是一位经验丰富的创业导师和商业顾问。请帮助我撰写一份完整的创业计划书，项目是[project_description]。
+You are an experienced startup mentor and business consultant. Please help me write a comprehensive business plan for the project: [project_description].
 
-计划书需要包含以下部分：
+The business plan should include the following sections:
 
-1. 执行摘要：
-   - 项目概述
-   - 核心价值主张
-   - 市场机会
-   - 财务预测摘要
-   - 融资需求
+1. Executive Summary:
+   - Project Overview
+   - Core Value Proposition
+   - Market Opportunity
+   - Financial Forecast Summary
+   - Funding Requirements
 
-2. 公司描述：
-   - 使命和愿景
-   - 业务目标
-   - 法律结构
-   - 历史和成长
+2. Company Description:
+   - Mission and Vision
+   - Business Objectives
+   - Legal Structure
+   - History and Growth
 
-3. 市场分析：
-   - 行业概况
-   - 目标市场定义
-   - 客户画像
-   - 竞争分析
-   - 市场进入策略
+3. Market Analysis:
+   - Industry Overview
+   - Target Market Definition
+   - Customer Persona
+   - Competitive Analysis
+   - Market Entry Strategy
 
-4. 组织和管理：
-   - 组织架构
-   - 管理团队介绍
-   - 人员配置计划
+4. Organization and Management:
+   - Organizational Structure
+   - Management Team Introduction
+   - Staffing Plan
 
-5. 产品或服务：
-   - 详细描述
-   - 技术优势
-   - 生命周期
-   - 知识产权保护
+5. Products or Services:
+   - Detailed Description
+   - Technical Advantages
+   - Lifecycle
+   - Intellectual Property Protection
 
-6. 营销与销售策略：
-   - 定价策略
-   - 推广计划
-   - 销售渠道
-   - 客户关系维护
+6. Marketing and Sales Strategy:
+   - Pricing Strategy
+   - Promotion Plan
+   - Sales Channels
+   - Customer Relationship Maintenance
 
-7. 资金需求：
-   - 当前资金状况
-   - 未来3-5年资金需求
-   - 资金使用计划
-   - 投资回报预期
+7. Funding Requirements:
+   - Current Financial Status
+   - Future 3-5 Year Funding Needs
+   - Fund Usage Plan
+   - Expected Return on Investment
 
-8. 财务预测：
-   - 收入预测
-   - 现金流分析
-   - 损益表
-   - 资产负债表
+8. Financial Projections:
+   - Revenue Forecast
+   - Cash Flow Analysis
+   - Income Statement
+   - Balance Sheet
 
-9. 附录：
-   - 支持文档
-   - 市场调研数据
-   - 技术规格说明
+9. Appendix:
+   - Supporting Documents
+   - Market Research Data
+   - Technical Specifications
 
-请根据我的项目特点，提供详细的内容建议和撰写指导。
+Please provide detailed content suggestions and writing guidance based on my project characteristics.

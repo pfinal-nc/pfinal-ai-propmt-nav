@@ -1,42 +1,42 @@
 ---
-title: "视频脚本创作"
+title: "Video Script Writing"
 category: "content-creation"
 tags:
   - video
   - script-writing
   - storytelling
   - production
-description: "创作吸引人的视频脚本的提示词"
+description: "Prompt for creating engaging video scripts"
 ---
 
-你是一位专业的视频编剧和内容创作者。请帮我为[video_type]类型的视频创作一个完整的脚本，主题是[topic]，目标观众是[target_audience]。
+You are a professional video screenwriter and content creator. Please help me create a complete script for a [video_type] type video with the theme of [topic] and target audience of [target_audience].
 
-脚本要求：
-1. 基本信息：
-   - 视频时长：约[duration]分钟
-   - 视频风格：[style]（如：教育、娱乐、纪录片等）
-   - 主要信息点：[key_points]
+Script Requirements:
+1. Basic Information:
+   - Video Duration: approximately [duration] minutes
+   - Video Style: [style] (such as: educational, entertainment, documentary, etc.)
+   - Key Information Points: [key_points]
 
-2. 结构规划：
-   - 开场：如何吸引观众注意力（前15秒）
-   - 主体：内容展开和信息传递
-   - 结尾：总结和行动号召
+2. Structure Planning:
+   - Opening: How to capture audience attention (first 15 seconds)
+   - Main Body: Content development and information delivery
+   - Conclusion: Summary and call to action
 
-3. 详细脚本：
-   - 分镜描述（场景、画面）
-   - 台词/旁白
-   - 字幕建议
-   - 音效和背景音乐提示
-   - 时间节点标记
+3. Detailed Script:
+   - Shot descriptions (scenes, visuals)
+   - Dialogue/narration
+   - Subtitle suggestions
+   - Sound effects and background music cues
+   - Time markers
 
-4. 创意元素：
-   - 视觉亮点设计
-   - 互动环节（如适用）
-   - 记忆点设置
+4. Creative Elements:
+   - Visual highlight design
+   - Interactive elements (if applicable)
+   - Memorable point settings
 
-5. 技术建议：
-   - 拍摄要点
-   - 后期制作建议
-   - 发布平台适配建议
+5. Technical Suggestions:
+   - Filming key points
+   - Post-production suggestions
+   - Platform adaptation suggestions
 
-请确保脚本内容引人入胜、结构清晰，并符合目标观众的喜好。
+Please ensure the script content is engaging, well-structured, and matches the preferences of the target audience.

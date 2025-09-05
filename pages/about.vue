@@ -1,61 +1,61 @@
 <template>
   <div class="min-h-screen bg-gray-50">
-    <!-- 页面头部 -->
+    <!-- Page Header -->
     <div class="bg-white shadow-sm">
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div class="text-center">
-          <h1 class="text-4xl font-bold text-gray-900 mb-4">关于 AI 提示词导航站</h1>
+          <h1 class="text-4xl font-bold text-gray-900 mb-4">About AI Prompts Navigation</h1>
           <p class="text-xl text-gray-600 max-w-3xl mx-auto">
-            我们致力于收集和整理全球最优质的AI提示词，为开发者、设计师、创作者和所有对AI感兴趣的用户提供便捷的提示词发现平台。
+            We are committed to collecting and organizing the world\'s highest quality AI prompts, providing a convenient prompt discovery platform for developers, designers, creators, and all users interested in AI.
           </p>
         </div>
       </div>
     </div>
 
-    <!-- 主要内容 -->
+    <!-- Main Content -->
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
       <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
-        <!-- 左侧内容 -->
+        <!-- Left Content -->
         <div class="space-y-8">
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">我们的使命</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Mission</h2>
             <p class="text-gray-600 leading-relaxed">
-              无论是ChatGPT、Claude、Gemini等AI对话工具，还是Midjourney、Stable Diffusion等AI绘画工具，我们都会持续更新最实用的提示词模板，确保您能找到最适合的AI工具使用技巧。
+              Whether it's AI conversation tools like ChatGPT, Claude, Gemini, or AI art tools like Midjourney, Stable Diffusion, we continuously update the most practical prompt templates to ensure you can find the most suitable AI tool usage techniques.
             </p>
           </div>
 
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">涵盖领域</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Coverage Areas</h2>
             <div class="grid grid-cols-2 gap-4">
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-blue-500 rounded-full"></div>
-                <span class="text-gray-600">AI 对话</span>
+                <span class="text-gray-600">AI Chat</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-green-500 rounded-full"></div>
-                <span class="text-gray-600">AI 绘画</span>
+                <span class="text-gray-600">AI Art</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-purple-500 rounded-full"></div>
-                <span class="text-gray-600">AI 编程</span>
+                <span class="text-gray-600">AI Programming</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-orange-500 rounded-full"></div>
-                <span class="text-gray-600">AI 写作</span>
+                <span class="text-gray-600">AI Writing</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-red-500 rounded-full"></div>
-                <span class="text-gray-600">AI 营销</span>
+                <span class="text-gray-600">AI Marketing</span>
               </div>
               <div class="flex items-center space-x-2">
                 <div class="w-2 h-2 bg-indigo-500 rounded-full"></div>
-                <span class="text-gray-600">AI 学习</span>
+                <span class="text-gray-600">AI Learning</span>
               </div>
             </div>
           </div>
 
           <div>
-            <h2 class="text-2xl font-bold text-gray-900 mb-4">我们的特色</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-4">Our Features</h2>
             <div class="space-y-4">
               <div class="flex items-start space-x-3">
                 <div class="w-6 h-6 bg-blue-100 rounded-full flex items-center justify-center flex-shrink-0 mt-0.5">
@@ -64,8 +64,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">精选优质提示词</h3>
-                  <p class="text-gray-600 text-sm">严格筛选高质量的AI提示词模板，确保实用性和有效性</p>
+                  <h3 class="font-semibold text-gray-900">Curated Quality Prompts</h3>
+                  <p class="text-gray-600 text-sm">Strictly screened high-quality AI prompt templates to ensure practicality and effectiveness</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
@@ -75,8 +75,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">持续更新维护</h3>
-                  <p class="text-gray-600 text-sm">定期更新最新的AI工具和提示词，紧跟AI技术发展</p>
+                  <h3 class="font-semibold text-gray-900">Continuous Updates</h3>
+                  <p class="text-gray-600 text-sm">Regularly updated with the latest AI tools and prompts, keeping up with AI technology development</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
@@ -86,8 +86,8 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">完全免费使用</h3>
-                  <p class="text-gray-600 text-sm">所有提示词模板完全免费，无需注册即可使用</p>
+                  <h3 class="font-semibold text-gray-900">Completely Free</h3>
+                  <p class="text-gray-600 text-sm">All prompt templates are completely free and can be used without registration</p>
                 </div>
               </div>
               <div class="flex items-start space-x-3">
@@ -97,40 +97,40 @@
                   </svg>
                 </div>
                 <div>
-                  <h3 class="font-semibold text-gray-900">便捷搜索功能</h3>
-                  <p class="text-gray-600 text-sm">强大的搜索和分类功能，快速找到您需要的提示词</p>
+                  <h3 class="font-semibold text-gray-900">Convenient Search</h3>
+                  <p class="text-gray-600 text-sm">Powerful search and categorization features to quickly find the prompts you need</p>
                 </div>
               </div>
             </div>
           </div>
         </div>
 
-        <!-- 右侧统计 -->
+        <!-- Right Statistics -->
         <div class="space-y-8">
           <div class="bg-white rounded-lg shadow-sm p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">网站统计</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Website Statistics</h2>
             <div class="grid grid-cols-2 gap-6">
               <div class="text-center">
                 <div class="text-3xl font-bold text-blue-600 mb-2">100+</div>
-                <div class="text-gray-600">提示词数量</div>
+                <div class="text-gray-600">Number of Prompts</div>
               </div>
               <div class="text-center">
                 <div class="text-3xl font-bold text-green-600 mb-2">6</div>
-                <div class="text-gray-600">主要分类</div>
+                <div class="text-gray-600">Main Categories</div>
               </div>
               <div class="text-center">
                 <div class="text-3xl font-bold text-purple-600 mb-2">10+</div>
-                <div class="text-gray-600">AI 工具</div>
+                <div class="text-gray-600">AI Tools</div>
               </div>
               <div class="text-center">
                 <div class="text-3xl font-bold text-orange-600 mb-2">100%</div>
-                <div class="text-gray-600">免费使用</div>
+                <div class="text-gray-600">Free to Use</div>
               </div>
             </div>
           </div>
 
           <div class="bg-white rounded-lg shadow-sm p-8">
-            <h2 class="text-2xl font-bold text-gray-900 mb-6">支持的工具</h2>
+            <h2 class="text-2xl font-bold text-gray-900 mb-6">Supported Tools</h2>
             <div class="space-y-4">
                              <div class="flex items-center justify-between p-3 bg-gray-50 rounded-lg">
                  <div class="flex items-center space-x-3">
@@ -173,12 +173,12 @@
         </div>
       </div>
 
-      <!-- 底部信息 -->
+      <!-- Bottom Information -->
       <div class="mt-16 text-center">
         <div class="bg-white rounded-lg shadow-sm p-8">
-          <h2 class="text-2xl font-bold text-gray-900 mb-4">联系我们</h2>
+          <h2 class="text-2xl font-bold text-gray-900 mb-4">Contact Us</h2>
           <p class="text-gray-600 mb-6">
-            如果您有任何建议、反馈或合作意向，欢迎联系我们
+            If you have any suggestions, feedback, or collaboration intentions, please feel free to contact us
           </p>
           <div class="flex justify-center space-x-6">
             <a href="https://github.com/pfinalclub" class="text-gray-600 hover:text-gray-900 transition-colors">
@@ -199,18 +199,18 @@
 </template>
 
 <script setup>
-// 页面元数据
+// Page metadata
 useHead({
-  title: '关于我们 - AI提示词导航站 | 精选AI工具提示词集合',
+  title: 'About Us - AI Prompts Navigation | Curated AI Tool Prompts Collection',
   meta: [
-    { name: 'description', content: '了解AI提示词导航站的使命和特色，我们致力于收集和整理全球最优质的AI提示词，为开发者、设计师、创作者提供便捷的提示词发现平台。' },
-    { name: 'keywords', content: 'AI提示词导航站,关于我们,AI工具,提示词模板,ChatGPT,Claude,Gemini,AI助手' },
-    { property: 'og:title', content: '关于我们 - AI提示词导航站' },
-    { property: 'og:description', content: '了解AI提示词导航站的使命和特色，我们致力于收集和整理全球最优质的AI提示词。' },
+    { name: 'description', content: 'Learn about the mission and features of AI Prompts Navigation. We are committed to collecting and organizing the world\'s highest quality AI prompts, providing a convenient prompt discovery platform for developers, designers, and creators.' },
+    { name: 'keywords', content: 'AI Prompts Navigation,About Us,AI tools,prompt templates,ChatGPT,Claude,Gemini,AI assistant' },
+    { property: 'og:title', content: 'About Us - AI Prompts Navigation' },
+    { property: 'og:description', content: 'Learn about the mission and features of AI Prompts Navigation. We are committed to collecting and organizing the world\'s highest quality AI prompts.' },
     { property: 'og:type', content: 'website' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: '关于我们 - AI提示词导航站' },
-    { name: 'twitter:description', content: '了解AI提示词导航站的使命和特色，我们致力于收集和整理全球最优质的AI提示词。' }
+    { name: 'twitter:title', content: 'About Us - AI Prompts Navigation' },
+    { name: 'twitter:description', content: 'Learn about the mission and features of AI Prompts Navigation. We are committed to collecting and organizing the world\'s highest quality AI prompts.' }
   ],
   link: [
     { rel: 'canonical', href: 'https://pnav.friday-go.icu/about' }

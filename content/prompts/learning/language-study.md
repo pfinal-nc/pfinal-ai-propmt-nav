@@ -1,11 +1,11 @@
 ---
-title: "语言学习计划"
+title: "Language Learning Plan"
 category: "learning"
 tags: 
     - language
     - study
     - plan
-description: "制定个性化的语言学习计划"
+description: "Create personalized language learning plans"
 ---
 
-请为我制定一个{language}的学习计划,我的目标是{goal},每天可以投入{time_per_day}小时学习.
+Please create a {language} learning plan for me. My goal is {goal}, and I can invest {time_per_day} hours per day for learning.

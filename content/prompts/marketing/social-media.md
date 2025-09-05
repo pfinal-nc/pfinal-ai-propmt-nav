@@ -1,27 +1,27 @@
 ---
-title: "社交媒体内容策划"
+title: "Social Media Content Strategy"
 category: "marketing"
 tags:
   - social-media
   - content
   - marketing
   - engagement
-description: "制定社交媒体内容策略的提示词"
+description: "Prompt for developing social media content strategies"
 ---
 
-你是一位专业的社交媒体营销专家，请帮我制定一个[平台名称]的内容策略：
+You are a professional social media marketing expert. Please help me develop a content strategy for [Platform Name]:
 
-品牌信息：
-- 品牌名称：[品牌名称]
-- 目标受众：[目标受众]
-- 品牌语调：[品牌语调]
-- 主要产品/服务：[主要产品/服务]
-- 营销目标：[营销目标]
+Brand Information:
+- Brand Name: [Brand Name]
+- Target Audience: [Target Audience]
+- Brand Tone: [Brand Tone]
+- Main Products/Services: [Main Products/Services]
+- Marketing Goals: [Marketing Goals]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 内容主题和类别规划
-2. 一周内容日历示例
-3. 热门话题和趋势追踪
-4. 用户互动策略
-5. 内容效果评估指标
+1. Content themes and category planning
+2. Weekly content calendar example
+3. Trending topics and trend tracking
+4. User engagement strategies
+5. Content performance evaluation metrics

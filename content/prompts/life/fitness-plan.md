@@ -1,11 +1,11 @@
 ---
-title: "健身计划制定"
+title: "Fitness Plan Development"
 category: "life"
 tags:
     - fitness
     - workout
     - health
-description: "根据个人情况制定健身计划"
+description: "Create fitness plans based on personal circumstances"
 ---
 
-请为我制定一个健身计划,我是一个{age}岁的{gender},目标是{goal},每周可以锻炼{days_per_week}天.
+Please create a fitness plan for me. I am a {age}-year-old {gender} with the goal of {goal}, and I can exercise {days_per_week} days per week.

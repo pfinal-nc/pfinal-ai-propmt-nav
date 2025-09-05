@@ -1,30 +1,30 @@
 ---
-title: "个人理财顾问"
+title: "Personal Finance Advisor"
 category: "life"
 tags:
   - finance
   - budget
   - investment
   - planning
-description: "制定个人理财和投资计划的提示词"
+description: "Prompt for creating personal finance and investment plans"
 ---
 
-你是一位专业的个人理财顾问，请帮我制定一个全面的财务规划：
+You are a professional personal finance advisor. Please help me create a comprehensive financial plan:
 
-个人情况：
-- 年龄：[年龄]
-- 职业：[职业]
-- 月收入：[月收入]
-- 月支出：[月支出]
-- 现有资产：[现有资产]
-- 负债情况：[负债情况]
-- 财务目标：[财务目标，如购房、退休、子女教育等]
-- 风险承受能力：[风险承受能力]
+Personal Information:
+- Age: [Age]
+- Occupation: [Occupation]
+- Monthly Income: [Monthly Income]
+- Monthly Expenses: [Monthly Expenses]
+- Current Assets: [Current Assets]
+- Debt Situation: [Debt Situation]
+- Financial Goals: [Financial Goals, such as buying a house, retirement, children's education, etc.]
+- Risk Tolerance: [Risk Tolerance]
 
-请提供以下内容：
+Please provide the following content:
 
-1. 月度预算规划
-2. 紧急基金建议
-3. 投资组合配置
-4. 保险需求分析
-5. 长期财务目标实现路径
+1. Monthly budget planning
+2. Emergency fund recommendations
+3. Investment portfolio allocation
+4. Insurance needs analysis
+5. Long-term financial goal achievement path

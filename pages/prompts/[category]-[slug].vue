@@ -2,9 +2,9 @@
 
   
   <div v-if="prompt">
-    <!-- 面包屑导航 -->
+    <!-- Breadcrumb Navigation -->
     <nav class="flex items-center space-x-2 text-sm text-gray-500 mb-6">
-      <NuxtLink to="/" class="hover:text-blue-600">首页</NuxtLink>
+      <NuxtLink to="/" class="hover:text-blue-600">Home</NuxtLink>
       <span>/</span>
       <NuxtLink :to="`/prompts/${category}`" class="hover:text-blue-600">
         {{ getCategoryName(category) }}
@@ -13,12 +13,12 @@
       <span class="text-gray-900">{{ prompt.title }}</span>
     </nav>
     
-    <!-- 提示词详情 -->
+    <!-- Prompt Details -->
     <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
-      <!-- 主要内容 -->
+      <!-- Main Content -->
       <div class="lg:col-span-2">
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-8">
-          <!-- 标题和基本信息 -->
+          <!-- Title and Basic Info -->
           <div class="mb-6">
             <div class="flex items-start justify-between mb-4">
               <h1 class="text-3xl font-bold text-gray-900">{{ prompt.title }}</h1>
@@ -35,40 +35,40 @@
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z"></path>
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z"></path>
                 </svg>
-                <span>{{ prompt.views || 0 }} 次浏览</span>
+                <span>{{ prompt.views || 0 }} views</span>
               </div>
               <div class="flex items-center space-x-1">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
                 </svg>
-                <span>{{ prompt.likes || 0 }} 次收藏</span>
+                <span>{{ prompt.likes || 0 }} likes</span>
               </div>
               <div class="flex items-center space-x-1">
                 <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3a4 4 0 118 0v4m-4 8a2 2 0 100-4 2 2 0 000 4zm0 0v4a2 2 0 002 2h6a2 2 0 002-2v-4a2 2 0 00-2-2H10a2 2 0 00-2 2z"></path>
                 </svg>
-                <span>{{ prompt.copies || 0 }} 次复制</span>
+                <span>{{ prompt.copies || 0 }} copies</span>
               </div>
             </div>
           </div>
           
-          <!-- 提示词内容 -->
+          <!-- Prompt Content -->
           <div class="mb-8">
-            <h2 class="text-xl font-semibold text-gray-900 mb-4">提示词内容</h2>
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Prompt Content</h2>
             <div class="bg-gray-50 rounded-lg p-6 relative">
-              <pre class="text-sm text-gray-800 whitespace-pre-wrap font-mono leading-relaxed">{{ prompt && prompt.body ? prompt.body : (prompt && prompt.content ? prompt.content : '内容加载中...') }}</pre>
+              <pre class="text-sm text-gray-800 whitespace-pre-wrap font-mono leading-relaxed">{{ prompt && prompt.body ? prompt.body : (prompt && prompt.content ? prompt.content : 'Content loading...') }}</pre>
               <button
                 @click="copyPrompt"
                 class="absolute top-4 right-4 px-3 py-1 text-sm bg-white text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
               >
-                {{ copied ? '已复制!' : '复制' }}
+                {{ copied ? 'Copied!' : 'Copy' }}
               </button>
             </div>
           </div>
           
-          <!-- 标签 -->
+          <!-- Tags -->
           <div v-if="prompt && prompt.tags && prompt.tags.length > 0" class="mb-8">
-            <h2 class="text-xl font-semibold text-gray-900 mb-4">标签</h2>
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Tags</h2>
             <div class="flex flex-wrap gap-2">
               <span
                 v-for="tag in prompt.tags"
@@ -80,9 +80,9 @@
             </div>
           </div>
           
-          <!-- 使用技巧 -->
+          <!-- Usage Tips -->
           <div v-if="prompt && prompt.tips" class="mb-8">
-            <h2 class="text-xl font-semibold text-gray-900 mb-4">使用技巧</h2>
+            <h2 class="text-xl font-semibold text-gray-900 mb-4">Usage Tips</h2>
             <div class="bg-yellow-50 rounded-lg p-6">
               <ul class="space-y-2">
                 <li
@@ -99,7 +99,7 @@
             </div>
           </div>
           
-          <!-- 操作按钮 -->
+          <!-- Action Buttons -->
           <div class="flex items-center space-x-4">
             <button
               @click="copyPrompt"
@@ -108,7 +108,7 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z"></path>
               </svg>
-              <span>{{ copied ? '已复制到剪贴板' : '复制提示词' }}</span>
+              <span>{{ copied ? 'Copied to clipboard' : 'Copy Prompt' }}</span>
             </button>
             
             <button
@@ -121,7 +121,7 @@
               <svg class="w-5 h-5" :fill="liked ? 'currentColor' : 'none'" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
               </svg>
-              <span>{{ liked ? '已收藏' : '收藏' }}</span>
+              <span>{{ liked ? 'Liked' : 'Like' }}</span>
             </button>
             
             <button
@@ -131,17 +131,17 @@
               <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.684 13.342C8.886 12.938 9 12.482 9 12c0-.482-.114-.938-.316-1.342m0 2.684a3 3 0 110-2.684m0 2.684l6.632 3.316m-6.632-6l6.632-3.316m0 0a3 3 0 105.367-2.684 3 3 0 00-5.367 2.684zm0 9.316a3 3 0 105.367 2.684 3 3 0 00-5.367-2.684z"></path>
               </svg>
-              <span>分享</span>
+              <span>Share</span>
             </button>
           </div>
         </div>
       </div>
       
-      <!-- 侧边栏 -->
+      <!-- Sidebar -->
       <div class="lg:col-span-1">
-        <!-- 适用AI工具 -->
+        <!-- Compatible AI Tools -->
         <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6 mb-6">
-          <h3 class="text-lg font-semibold text-gray-900 mb-4">适用AI工具</h3>
+          <h3 class="text-lg font-semibold text-gray-900 mb-4">Compatible AI Tools</h3>
           <div class="space-y-2">
             <div class="flex items-center space-x-2">
               <div class="w-2 h-2 bg-green-500 rounded-full"></div>
@@ -157,7 +157,7 @@
             </div>
             <div class="flex items-center space-x-2">
               <div class="w-2 h-2 bg-yellow-500 rounded-full"></div>
-              <span class="text-sm text-gray-700">文心一言</span>
+              <span class="text-sm text-gray-700">ERNIE Bot</span>
             </div>
           </div>
         </div>
@@ -165,18 +165,18 @@
     </div>
   </div>
   
-  <!-- 404状态 -->
+  <!-- 404 State -->
   <div v-else class="text-center py-12">
     <svg class="w-16 h-16 text-gray-300 mx-auto mb-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.172 16.172a4 4 0 015.656 0M9 12h6m-6-4h6m2 5.291A7.962 7.962 0 0112 15c-2.34 0-4.5-.816-6.207-2.175.193-.39.398-.778.618-1.158A8.962 8.962 0 0112 13.5c2.34 0 4.5-.816 6.207-2.175-.193-.39-.398-.778-.618-1.158A7.962 7.962 0 0112 12z"></path>
     </svg>
-    <h3 class="text-lg font-medium text-gray-900 mb-2">提示词不存在</h3>
-    <p class="text-gray-600 mb-4">您访问的提示词可能已被删除或不存在</p>
+    <h3 class="text-lg font-medium text-gray-900 mb-2">Prompt Not Found</h3>
+    <p class="text-gray-600 mb-4">The prompt you are trying to access may have been deleted or does not exist</p>
     <NuxtLink
       to="/"
       class="px-4 py-2 bg-blue-600 text-white rounded-md hover:bg-blue-700 transition-colors"
     >
-      返回首页
+      Return to Home
     </NuxtLink>
   </div>
 </template>
@@ -188,39 +188,39 @@ import { getCategoryName } from '~/utils/categories'
 const route = useRoute()
 const { category, slug } = route.params
 
-// 响应式数据
+// Reactive data
 const copied = ref(false)
 const liked = ref(false)
 
-// 获取提示词详情
+// Get prompt details
 const promptRef = await usePromptBySlug(category, slug)
 const prompt = promptRef.value
 
-// 页面元数据
+// Page metadata
 useHead(() => ({
-  title: `${prompt?.title || '提示词详情'} - ${getCategoryName(prompt?.category) || 'AI工具'} | AI提示词导航站`,
+  title: `${prompt?.title || 'Prompt Details'} - ${getCategoryName(prompt?.category) || 'AI Tools'} | AI Prompts Navigation`,
   meta: [
     { 
       name: 'description', 
-      content: `${prompt?.description || '查看AI提示词详情'}。适用于ChatGPT、Claude、Gemini等AI工具，提升${getCategoryName(prompt?.category) || 'AI工具'}效率的实用模板。` 
+      content: `${prompt?.description || 'View AI prompt details'}. Compatible with ChatGPT, Claude, Gemini and other AI tools, practical templates to improve ${getCategoryName(prompt?.category) || 'AI tool'} efficiency.` 
     },
     { 
       name: 'keywords', 
-      content: `${prompt?.title || 'AI提示词'},${getCategoryName(prompt?.category) || 'AI工具'},${prompt?.tags?.join(',') || ''}ChatGPT提示词,Claude提示词,Gemini提示词,AI工具,提示词模板` 
+      content: `${prompt?.title || 'AI prompts'},${getCategoryName(prompt?.category) || 'AI tools'},${prompt?.tags?.join(',') || ''}ChatGPT prompts,Claude prompts,Gemini prompts,AI tools,prompt templates` 
     },
-    { property: 'og:title', content: `${prompt?.title || '提示词详情'} - ${getCategoryName(prompt?.category) || 'AI工具'} | AI提示词导航站` },
+    { property: 'og:title', content: `${prompt?.title || 'Prompt Details'} - ${getCategoryName(prompt?.category) || 'AI Tools'} | AI Prompts Navigation` },
     { 
       property: 'og:description', 
-      content: `${prompt?.description || '查看AI提示词详情'}。适用于ChatGPT、Claude、Gemini等AI工具，提升${getCategoryName(prompt?.category) || 'AI工具'}效率的实用模板。` 
+      content: `${prompt?.description || 'View AI prompt details'}. Compatible with ChatGPT, Claude, Gemini and other AI tools, practical templates to improve ${getCategoryName(prompt?.category) || 'AI tool'} efficiency.` 
     },
     { property: 'og:type', content: 'article' },
-    { property: 'article:section', content: getCategoryName(prompt?.category) || 'AI工具' },
-    { property: 'article:tag', content: prompt?.tags?.join(', ') || 'AI提示词' },
+    { property: 'article:section', content: getCategoryName(prompt?.category) || 'AI Tools' },
+    { property: 'article:tag', content: prompt?.tags?.join(', ') || 'AI prompts' },
     { name: 'twitter:card', content: 'summary_large_image' },
-    { name: 'twitter:title', content: `${prompt?.title || '提示词详情'} - ${getCategoryName(prompt?.category) || 'AI工具'} | AI提示词导航站` },
+    { name: 'twitter:title', content: `${prompt?.title || 'Prompt Details'} - ${getCategoryName(prompt?.category) || 'AI Tools'} | AI Prompts Navigation` },
     { 
       name: 'twitter:description', 
-      content: `${prompt?.description || '查看AI提示词详情'}。适用于ChatGPT、Claude、Gemini等AI工具，提升${getCategoryName(prompt?.category) || 'AI工具'}效率的实用模板。` 
+      content: `${prompt?.description || 'View AI prompt details'}. Compatible with ChatGPT, Claude, Gemini and other AI tools, practical templates to improve ${getCategoryName(prompt?.category) || 'AI tool'} efficiency.` 
     }
   ],
   link: [
@@ -236,11 +236,11 @@ useHead(() => ({
         description: prompt?.description,
         author: {
           '@type': 'Organization',
-          name: 'AI提示词导航站'
+          name: 'AI Prompts Navigation'
         },
         publisher: {
           '@type': 'Organization',
-          name: 'AI提示词导航站',
+          name: 'AI Prompts Navigation',
           url: 'https://pnav.friday-go.icu'
         },
         datePublished: new Date().toISOString(),
@@ -249,7 +249,7 @@ useHead(() => ({
           '@type': 'WebPage',
           '@id': `https://pnav.friday-go.icu/prompts/${category}-${slug}`
         },
-        keywords: prompt?.tags?.join(', ') || 'AI提示词',
+        keywords: prompt?.tags?.join(', ') || 'AI prompts',
         articleSection: getCategoryName(prompt?.category)
       })
     },
@@ -262,7 +262,7 @@ useHead(() => ({
           {
             '@type': 'ListItem',
             position: 1,
-            name: '首页',
+            name: 'Home',
             item: 'https://pnav.friday-go.icu'
           },
           {
@@ -274,7 +274,7 @@ useHead(() => ({
           {
             '@type': 'ListItem',
             position: 3,
-            name: prompt?.title || '提示词详情',
+            name: prompt?.title || 'Prompt Details',
             item: `https://pnav.friday-go.icu/prompts/${category}-${slug}`
           }
         ]
@@ -283,16 +283,16 @@ useHead(() => ({
   ]
 }))
 
-// 方法
+// Methods
 const copyPrompt = async () => {
-  // 尝试多种字段
+  // Try multiple fields
   let bodyText = ''
   if (prompt?.body && typeof prompt.body === 'string') {
     bodyText = prompt.body
   } else if (prompt?.content && typeof prompt.content === 'string') {
     bodyText = prompt.content
   } else {
-    // 安全地序列化对象，避免循环引用
+    // Safely serialize object to avoid circular references
     try {
       bodyText = JSON.stringify({
         title: prompt?.title,
@@ -302,14 +302,14 @@ const copyPrompt = async () => {
         tags: prompt?.tags
       }, null, 2)
     } catch (jsonErr) {
-      bodyText = prompt?.body || prompt?.content || '内容不可用'
+      bodyText = prompt?.body || prompt?.content || 'Content unavailable'
     }
   }
   
   try {
-    // 检查 clipboard API 是否可用
+    // Check if clipboard API is available
     if (!navigator.clipboard) {
-      // 备用方法：创建临时文本区域
+      // Fallback method: create temporary text area
       const textArea = document.createElement('textarea')
       textArea.value = bodyText
       document.body.appendChild(textArea)
@@ -325,11 +325,11 @@ const copyPrompt = async () => {
       copied.value = false
     }, 2000)
   } catch (err) {
-    console.error('复制失败:', err)
-    // 尝试备用方法
+    console.error('Copy failed:', err)
+    // Try fallback method
     try {
       const textArea = document.createElement('textarea')
-      textArea.value = bodyText || '复制失败'
+      textArea.value = bodyText || 'Copy failed'
       document.body.appendChild(textArea)
       textArea.select()
       document.execCommand('copy')
@@ -339,14 +339,14 @@ const copyPrompt = async () => {
         copied.value = false
       }, 2000)
     } catch (backupErr) {
-      console.error('备用复制方法也失败:', backupErr)
+      console.error('Fallback copy method also failed:', backupErr)
     }
   }
 }
 
 const toggleLike = () => {
   liked.value = !liked.value
-  // 这里可以添加API调用来更新收藏状态
+  // Here you can add API call to update like status
 }
 
 const sharePrompt = async () => {
@@ -358,24 +358,24 @@ const sharePrompt = async () => {
         url: window.location.href
       })
     } catch (err) {
-      console.log('分享取消或失败')
+      console.log('Share cancelled or failed')
     }
   } else {
-    // 降级到复制链接
+    // Fallback to copy link
     try {
       await navigator.clipboard.writeText(window.location.href)
-      alert('链接已复制到剪贴板')
+      alert('Link copied to clipboard')
     } catch (err) {
-      console.error('分享失败:', err)
+      console.error('Share failed:', err)
     }
   }
 }
 
-// 如果提示词不存在，显示404 - 只在客户端执行
+// If prompt doesn't exist, show 404 - only execute on client side
 if (process.client && !prompt) {
   throw createError({
     statusCode: 404,
-    statusMessage: '提示词不存在'
+    statusMessage: 'Prompt not found'
   })
 }
 </script>

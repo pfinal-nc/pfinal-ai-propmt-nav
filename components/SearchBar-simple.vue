@@ -5,7 +5,7 @@
         v-model="searchQuery"
         @input="handleSearch"
         type="text"
-        placeholder="搜索提示词..."
+        placeholder="Search prompts..."
         class="w-full px-4 py-3 pl-12 pr-4 text-gray-900 bg-white border border-gray-300 rounded-lg shadow-sm focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent"
       >
       <div class="absolute inset-y-0 left-0 flex items-center pl-4">

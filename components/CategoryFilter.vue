@@ -1,8 +1,8 @@
 <template>
   <div class="bg-white rounded-lg shadow-sm border border-gray-200 p-6">
-    <h3 class="text-lg font-semibold text-gray-900 mb-4">筛选分类</h3>
+    <h3 class="text-lg font-semibold text-gray-900 mb-4">Filter Categories</h3>
     
-    <!-- 全部分类按钮 -->
+    <!-- All Categories Button -->
     <button
       @click="selectCategory('all')"
       :class="[
@@ -13,12 +13,12 @@
       ]"
     >
       <div class="flex items-center justify-between">
-        <span>全部分类</span>
+        <span>All Categories</span>
         <span class="text-sm text-gray-500">{{ totalCount }}</span>
       </div>
     </button>
     
-    <!-- 分类列表 -->
+    <!-- Category List -->
     <div class="space-y-1">
       <button
         v-for="category in categories"
@@ -41,9 +41,9 @@
       </button>
     </div>
     
-    <!-- 标签筛选 -->
+    <!-- Tag Filter -->
     <div class="mt-6 pt-6 border-t border-gray-200">
-      <h4 class="text-md font-medium text-gray-900 mb-3">热门标签</h4>
+      <h4 class="text-md font-medium text-gray-900 mb-3">Popular Tags</h4>
       <div class="flex flex-wrap gap-2">
         <button
           v-for="tag in popularTags"
@@ -61,13 +61,13 @@
       </div>
     </div>
     
-    <!-- 清除筛选 -->
+    <!-- Clear Filter -->
     <button
       v-if="selectedCategory !== 'all' || selectedTags.length > 0"
       @click="clearFilters"
       class="w-full mt-4 px-4 py-2 text-sm text-gray-600 hover:text-gray-800 border border-gray-300 rounded-md hover:bg-gray-50 transition-colors"
     >
-      清除所有筛选
+      Clear All Filters
     </button>
   </div>
 </template>
@@ -85,22 +85,22 @@ const props = defineProps({
 const selectedCategory = ref('all')
 const selectedTags = ref([])
 
-// 分类数据
+// Category data
 const categories = ref([
-  { key: 'writing', name: '写作助手', icon: '✍️', count: 25 },
-  { key: 'coding', name: '编程开发', icon: '💻', count: 32 },
-  { key: 'marketing', name: '营销文案', icon: '📢', count: 18 },
-  { key: 'learning', name: '学习辅助', icon: '📚', count: 22 },
-  { key: 'translation', name: '翻译润色', icon: '🌐', count: 15 },
-  { key: 'design', name: '创意设计', icon: '🎨', count: 12 },
-  { key: 'analysis', name: '数据分析', icon: '📊', count: 14 },
-  { key: 'business', name: '商务办公', icon: '💼', count: 19 }
+  { key: 'writing', name: 'Writing Assistant', icon: '✍️', count: 25 },
+  { key: 'coding', name: 'Programming & Development', icon: '💻', count: 32 },
+  { key: 'marketing', name: 'Marketing & Copywriting', icon: '📢', count: 18 },
+  { key: 'learning', name: 'Learning Assistant', icon: '📚', count: 22 },
+  { key: 'translation', name: 'Translation & Editing', icon: '🌐', count: 15 },
+  { key: 'design', name: 'Creative Design', icon: '🎨', count: 12 },
+  { key: 'analysis', name: 'Data Analysis', icon: '📊', count: 14 },
+  { key: 'business', name: 'Business & Office', icon: '💼', count: 19 }
 ])
 
-// 热门标签
+// Popular tags
 const popularTags = [
-  'ChatGPT', 'Claude', 'Gemini', '中文优化', 
-  '专业级', '创意', '高效', '实用'
+  'ChatGPT', 'Claude', 'Gemini', 'Chinese Optimized', 
+  'Professional', 'Creative', 'Efficient', 'Practical'
 ]
 
 const selectCategory = (category) => {
@@ -131,7 +131,7 @@ const emitFilterChange = () => {
   })
 }
 
-// 监听外部重置
+// Listen for external reset
 defineExpose({
   clearFilters
 })

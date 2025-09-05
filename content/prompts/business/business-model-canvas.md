@@ -1,61 +1,61 @@
 ---
-title: "商业模式画布设计"
+title: "Business Model Canvas Design"
 category: "business-plan"
 tags:
   - business-model
   - canvas
   - lean-startup
   - innovation
-description: "使用商业模式画布设计和分析业务模式的提示词"
+description: "Prompt for designing and analyzing business models using Business Model Canvas"
 ---
 
-你是一位商业模式创新专家。请帮我使用商业模式画布（Business Model Canvas）来设计和分析我的业务：[business_idea]。
+You are a business model innovation expert. Please help me use the Business Model Canvas to design and analyze my business: [business_idea].
 
-请逐一分析以下9个模块，并提供详细建议：
+Please analyze the following 9 modules one by one and provide detailed suggestions:
 
-1. 客户细分（Customer Segments）：
-   - 我们的目标客户是谁？
-   - 如何细分不同的客户群体？
-   - 客户的特征和需求是什么？
+1. Customer Segments:
+   - Who are our target customers?
+   - How to segment different customer groups?
+   - What are the characteristics and needs of customers?
 
-2. 价值主张（Value Propositions）：
-   - 我们为客户提供什么价值？
-   - 解决了客户的什么问题？
-   - 与竞争对手相比有何独特之处？
+2. Value Propositions:
+   - What value do we provide to customers?
+   - What problems do we solve for customers?
+   - What makes us unique compared to competitors?
 
-3. 渠道通路（Channels）：
-   - 如何与客户沟通和接触？
-   - 通过哪些渠道销售产品/服务？
-   - 哪些渠道最有效？
+3. Channels:
+   - How do we communicate and reach customers?
+   - Through which channels do we sell products/services?
+   - Which channels are most effective?
 
-4. 客户关系（Customer Relationships）：
-   - 如何与不同客户群体建立和维护关系？
-   - 需要什么样的客户关系？
-   - 自动化程度如何？
+4. Customer Relationships:
+   - How do we build and maintain relationships with different customer groups?
+   - What kind of customer relationships do we need?
+   - What is the level of automation?
 
-5. 收入来源（Revenue Streams）：
-   - 客户愿意为我们提供的价值付多少钱？
-   - 他们目前是如何支付的？
-   - 收入模式是什么？
+5. Revenue Streams:
+   - How much are customers willing to pay for the value we provide?
+   - How do they currently pay?
+   - What is the revenue model?
 
-6. 核心资源（Key Resources）：
-   - 业务运行需要哪些最重要的资产？
-   - 哪些是稀缺资源？
-   - 如何获取这些资源？
+6. Key Resources:
+   - What are the most important assets needed for business operations?
+   - Which are scarce resources?
+   - How to acquire these resources?
 
-7. 关键业务（Key Activities）：
-   - 业务成功最关键的活动是什么？
-   - 价值主张需要哪些关键业务？
-   - 渠道和客户关系需要哪些关键业务？
+7. Key Activities:
+   - What are the most critical activities for business success?
+   - What key activities are needed for value propositions?
+   - What key activities are needed for channels and customer relationships?
 
-8. 重要合作（Key Partnerships）：
-   - 谁是我们的关键合作伙伴？
-   - 谁是我们的关键供应商？
-   - 我们正在从合作伙伴那里获取哪些核心资源？
+8. Key Partnerships:
+   - Who are our key partners?
+   - Who are our key suppliers?
+   - What key resources are we acquiring from partners?
 
-9. 成本结构（Cost Structure）：
-   - 业务运行最重要的成本是什么？
-   - 哪些核心资源和关键业务成本最高？
-   - 成本结构是高还是低？是成本导向还是价值导向？
+9. Cost Structure:
+   - What are the most important costs for business operations?
+   - Which key resources and key activities cost the most?
+   - Is the cost structure high or low? Cost-driven or value-driven?
 
-请针对每个模块提供分析和优化建议。
+Please provide analysis and optimization suggestions for each module.

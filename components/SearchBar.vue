@@ -1,26 +1,26 @@
 <template>
   <div class="relative">
-    <!-- 搜索框容器 -->
+    <!-- Search Box Container -->
     <div class="relative group">
-      <!-- 搜索输入框 -->
+      <!-- Search Input Box -->
       <input
         v-model="searchQuery"
         @keyup.enter="performSearch"
         @focus="showSuggestions = true"
         @blur="handleBlur"
         type="text"
-        placeholder="搜索提示词... 例如：写作、编程、营销"
+        placeholder="Search prompts... e.g.: writing, coding, marketing"
         class="w-full px-4 py-2.5 pl-12 pr-10 text-gray-900 bg-white/80 backdrop-blur-sm border-2 border-gray-200/60 rounded-xl shadow-soft focus:outline-none focus:ring-4 focus:ring-indigo-500/20 focus:border-indigo-500 focus:bg-white transition-all duration-300 text-sm placeholder-gray-400"
       >
       
-      <!-- 搜索图标 -->
+      <!-- Search Icon -->
       <div class="absolute inset-y-0 left-0 flex items-center pl-4">
         <svg class="w-4 h-4 text-gray-400 group-focus-within:text-indigo-500 transition-colors duration-300" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
         </svg>
       </div>
       
-      <!-- 清除按钮 -->
+      <!-- Clear Button -->
       <button
         v-if="searchQuery"
         @click="clearSearch"
@@ -32,7 +32,7 @@
         </svg>
       </button>
       
-      <!-- 搜索建议下拉框 -->
+      <!-- Search Suggestions Dropdown -->
       <div 
         v-if="showSuggestions && searchQuery && filteredSuggestions.length > 0"
         class="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg z-50 max-h-48 overflow-y-auto"
@@ -55,13 +55,13 @@
       </div>
     </div>
     
-    <!-- 热门搜索标签 -->
+    <!-- Popular Search Tags -->
     <div class="mt-4 flex flex-wrap gap-2 justify-center">
       <span class="text-sm text-gray-500 font-medium flex items-center">
         <svg class="w-4 h-4 mr-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
           <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z"></path>
         </svg>
-        热门搜索:
+        Popular searches:
       </span>
       <button
         v-for="tag in popularTags"
@@ -73,11 +73,11 @@
       </button>
     </div>
     
-    <!-- 搜索统计信息 -->
+    <!-- Search Statistics -->
     <div v-if="searchQuery && searchStats" class="mt-3 text-center">
       <p class="text-sm text-gray-500">
-        找到 <span class="font-semibold text-indigo-600">{{ searchStats.count }}</span> 个相关提示词
-        <span v-if="searchStats.time" class="text-gray-400">· 用时 {{ searchStats.time }}ms</span>
+        Found <span class="font-semibold text-indigo-600">{{ searchStats.count }}</span> related prompts
+        <span v-if="searchStats.time" class="text-gray-400">· took {{ searchStats.time }}ms</span>
       </p>
     </div>
   </div>
@@ -90,20 +90,20 @@ const route = useRoute()
 const searchQuery = ref(route.query.q || '')
 const showSuggestions = ref(false)
 
-// 热门搜索标签
+// Popular search tags
 const popularTags = [
-  '写作助手', '代码生成', '营销文案', '学习计划', 
-  '翻译润色', 'SEO优化', '创意设计', '数据分析'
+  'Writing Assistant', 'Code Generation', 'Marketing Copy', 'Study Plan', 
+  'Translation', 'SEO Optimization', 'Creative Design', 'Data Analysis'
 ]
 
-// 搜索建议（基于热门标签和常见搜索词）
+// Search suggestions (based on popular tags and common search terms)
 const searchSuggestions = [
-  '写作助手', '代码生成', '营销文案', '学习计划', 
-  '翻译润色', 'SEO优化', '创意设计', '数据分析',
+  'Writing Assistant', 'Code Generation', 'Marketing Copy', 'Study Plan', 
+  'Translation', 'SEO Optimization', 'Creative Design', 'Data Analysis',
   'Python', 'JavaScript', 'Vue', 'React', 'ChatGPT', 'Claude'
 ]
 
-// 过滤搜索建议
+// Filter search suggestions
 const filteredSuggestions = computed(() => {
   if (!searchQuery.value) return []
   const query = searchQuery.value.toLowerCase()
@@ -112,17 +112,17 @@ const filteredSuggestions = computed(() => {
   )
 })
 
-// 搜索统计
+// Search statistics
 const searchStats = ref(null)
 
 const performSearch = () => {
   if (searchQuery.value.trim()) {
     const startTime = Date.now()
     
-    // 模拟搜索延迟
+    // Simulate search delay
     setTimeout(() => {
       searchStats.value = {
-        count: Math.floor(Math.random() * 50) + 10, // 模拟结果数
+        count: Math.floor(Math.random() * 50) + 10, // Simulate result count
         time: Date.now() - startTime
       }
     }, 100)
@@ -153,17 +153,17 @@ const selectSuggestion = (suggestion) => {
 }
 
 const handleBlur = () => {
-  // 延迟隐藏建议，避免点击建议时立即隐藏
+  // Delay hiding suggestions to avoid immediate hiding when clicking suggestions
   setTimeout(() => {
     showSuggestions.value = false
   }, 150)
 }
 
-// 监听搜索查询变化，触发事件
+// Listen for search query changes and trigger events
 watch(searchQuery, (newQuery) => {
   emit('search', newQuery)
   
-  // 重置搜索统计
+  // Reset search statistics
   if (!newQuery) {
     searchStats.value = null
   }
@@ -173,7 +173,7 @@ const emit = defineEmits(['search'])
 </script>
 
 <style scoped>
-/* 自定义滚动条 */
+/* Custom scrollbar */
 .overflow-y-auto::-webkit-scrollbar {
   width: 4px;
 }
